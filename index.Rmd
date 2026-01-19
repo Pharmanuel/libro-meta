@@ -1,5 +1,5 @@
 ---
-title: "Guía Avanzada de Formulación Magistral: Cumplimiento, Calidad y Terapia Hormonal Bioidéntica"
+title: "Guía Avanzada de Formulación Magistral: Cumplimiento, Calidad y Terapia Hormonal"
 author: "Manuel García / MetaPharmaceutical"
 date: "`r format(Sys.Date(), '%d de %B de %Y')`"
 lang: es

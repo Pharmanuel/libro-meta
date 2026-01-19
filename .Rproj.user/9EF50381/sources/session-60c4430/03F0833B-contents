@@ -1,7 +1,0 @@
-book_filename: "mi-guia"
-output_dir: "docs"
-delete_merged_file: true
-language:
-  ui:
-    chapter_name: "Capítulo "
-    

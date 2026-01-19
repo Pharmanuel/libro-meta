@@ -19,10 +19,3 @@ estrona-e1
 progesterona-p4.la-hormona-de-la-homeostasis-y-protección-tisular.
 terapia-hormonal-en-la-mujer-ii
 atrofia-vulvovaginal.
-footnotes-and-citations
-footnotes
-citations
-sharing-your-book
-publishing
-pages
-metadata-for-sharing
