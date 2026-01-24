@@ -12,3 +12,6 @@ pre {
 pre code {
   white-space: inherit;
 }
+.header-section-number::after {
+  content: ". ";  /* He añadido un espacio después del punto */
+}

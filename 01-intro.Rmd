@@ -3,59 +3,59 @@ output:
   pdf_document: default
   html_document: default
 ---
-# Introducción. Marco legal y buenas prácticas de elaboración.
+# Introducción. marco legal y buenas prácticas de elaboración.
   
-## Definición de Terapia Hormonal de Reemplazo Personalizada (THR-P).
+## Definición de terapia hormonal de reemplazo personalizada (THR-P).
 Se define como un tratamiento de precisión basado en el uso de **Hormonas de reemplazo**, cuya eficacia está intrínsecamente ligada a la identidad molecular de la sustancia activa.
 
-### Origen, Síntesis y Estructura Molecular de las Hormonas de reemplazo.
+### Origen, síntesis y estructura molecular de las hormonas de reemplazo.
 Una hormona utilizada para terapia de reemplazo se caracteriza por ser molecularmente idéntica a las hormonas esteroideas producidas de forma endógena (ej., Estradiol, Progesterona), asegurando la máxima precisión fisiológica.
 
- **Proceso de Obtención (Semisíntesis)**
+ **Proceso de obtención (semisíntesis)**
  
 El proceso para obtener estas Hormonas requiere una semisíntesis farmacéutica de alta precisión que parte de precursores naturales.
 
-***1.-Materia Prima Base:*** La obtención arranca con el aislamiento de un componente vegetal, la Diosgenina, un precursor esteroideo que se encuentra en alta concentración en plantas como el ñame o la soja. Este componente se utiliza como una materia prima de bajo coste.
+***1.-Materia prima base:*** La obtención arranca con el aislamiento de un componente vegetal, la Diosgenina, un precursor esteroideo que se encuentra en alta concentración en plantas como el ñame o la soja. Este componente se utiliza como una materia prima de bajo coste.
 
-***2.-Transformación Química:*** La Diosgenina se introduce en un proceso químico de semisíntesis industrial (una cascada de reacciones controladas). Este proceso modifica y "remodela" la estructura molecular vegetal mediante pasos de alta precisión hasta que es químicamente y estructuralmente idéntica a la hormona humana.
+***2.-Transformación química:*** La Diosgenina se introduce en un proceso químico de semisíntesis industrial (una cascada de reacciones controladas). Este proceso modifica y "remodela" la estructura molecular vegetal mediante pasos de alta precisión hasta que es químicamente y estructuralmente idéntica a la hormona humana.
 
-***3.-Principio Activo Final:*** El producto es el Principio Activo Farmacéutico (API) puro, molecularmente indistinguible de la hormona producida por el cuerpo (ej., Estradiol, Progesterona). Si bien su origen es natural, la obtención de la molécula bioidéntica es el resultado de la alta tecnología de síntesis farmacéutica, que garantiza su identidad química.
+***3.-Principio activo final:*** El producto es el principio activo farmacéutico (API) puro, molecularmente indistinguible de la hormona producida por el cuerpo (ej., Estradiol, Progesterona). Si bien su origen es natural, la obtención de la molécula bioidéntica es el resultado de la alta tecnología de síntesis farmacéutica, que garantiza su identidad química.
  
 
-### Reconocimiento Fisiológico y Rutas Metabólicas.
-La identidad estructural de las Hormonas de reemplazo implica ventajas fisiológicas directas:
+### Reconocimiento fisiológico y rutas metabólicas.
+La identidad estructural de las hormonas de reemplazo implica ventajas fisiológicas directas:
 
-- **Reconocimiento Fisiológico Total:** El cuerpo, a nivel de receptores (nucleares y de membrana), reconoce y procesa la molécula como si fuera secretada por el propio organismo.
+- **Reconocimiento fisiológico total:** El cuerpo, a nivel de receptores (nucleares y de membrana), reconoce y procesa la molécula como si fuera secretada por el propio organismo.
 
-- **Rutas Metabólicas Fisiológicas:** Las Hormonas de reemplazo son metabolizadas a través de las rutas enzimáticas naturales (ej., conjugación, hidroxilación), generando metabolitos conocidos y previsibles. Esto contrasta con moléculas sintéticas (ej., progestinas o estrógenos equinos conjugados), que difieren estructuralmente y pueden generar metabolitos atípicos o mostrar una selectividad alterada por los receptores, lo que se ha postulado como un factor de riesgo en ciertos tejidos (ej., proliferación endometrial, efectos cardiovasculares, etc).
+- **Rutas metabólicas fisiológicas:** Las hormonas de reemplazo son metabolizadas a través de las rutas enzimáticas naturales (ej., conjugación, hidroxilación), generando metabolitos conocidos y previsibles. Esto contrasta con moléculas sintéticas (ej., progestinas o estrógenos equinos conjugados), que difieren estructuralmente y pueden generar metabolitos atípicos o mostrar una selectividad alterada por los receptores, lo que se ha postulado como un factor de riesgo en ciertos tejidos (ej., proliferación endometrial, efectos cardiovasculares, etc).
 
-- **Hormonas Comúnmente utilizadas en terapia de reemplazo:** Dehidroepiandrosterona ($\text{DHEA}$),  Progesterona ($\text{P4}$) Estradiol ($\text{E2}$), Estriol ($\text{E3}$), y Testosterona ($\text{T}$).
+- **Hormonas comúnmente utilizadas en terapia de reemplazo:** Dehidroepiandrosterona ($\text{DHEA}$),  Progesterona ($\text{P4}$) Estradiol ($\text{E2}$), Estriol ($\text{E3}$), y Testosterona ($\text{T}$).
 
-### Seguridad y Respuesta Tisular.
-La ventaja clínica de la estructura idéntica reside en la respuesta tisular: la Progesterona, por ejemplo, ha demostrado un efecto protector y no proliferativo en la mama y el endometrio, que es fundamental en la  Terapia de Reemplazo Hormonal. La elección de la vía de administración no oral (ej., transdérmica) es indispensable para la seguridad, ya que evita el metabolismo de primer paso hepático y sus riesgos asociados (ej., modulación adversa de factores de coagulación).
+### Seguridad y respuesta tisular.
+La ventaja clínica de la estructura idéntica reside en la respuesta tisular: la Progesterona, por ejemplo, ha demostrado un efecto protector y no proliferativo en la mama y el endometrio, que es fundamental en la  terapia de reemplazo hormonal. La elección de la vía de administración no oral (ej., transdérmica) es indispensable para la seguridad, ya que evita el metabolismo de primer paso hepático y sus riesgos asociados (ej., modulación adversa de factores de coagulación).
 
-## El Rigor Normativo del RD 175/2001: De la Prescripción a la Trazabilidad.
+## El rigor normativo del RD 175/2001: De la prescripción a la trazabilidad.
 El marco regulatorio en España está definido por el Real Decreto 175/2001 (BPE), que exige que la formulación magistral se rija por estándares de fabricación rigurosos. Este cumplimiento es el pilar de la seguridad en la Terapia Hormonal Personalizada.
 
-### Requisitos Legales de la Prescripción (Art. 3 y 4).
+### Requisitos legales de la prescripción (Art. 3 y 4).
 La **prescripción médica** o **receta** es el mandato legal que activa el protocolode Buenas Prácticas de Elaboración y requiere que sea:
 
  - **Nominativa:** Identificación completa del paciente (nombre, DNI) que justifica el carácter individualizado del tratamiento.
 
 - **Completa**: Detalle preciso de la composición cuali y cuantitativa (dosis), la forma farmacéutica y la vía de administración.
 
-### Trazabilidad y Documentación Obligatoria (BPE - Título II).
+### Trazabilidad y documentación obligatoria (BPE - Título II).
 La trazabilidad documental es crítica para la auditoría y la farmacovigilancia:
 
-**Trazabilidad de Materias Primas:** La Ficha de Trazabilidad debe vincular el lote de la hormona utilizada con su Certificado de Análisis (CoA) original, garantizando que el principio activo cumpla las especificaciones de la Farmacopea (ej., Ph. Eur.) y esté libre de contaminantes.
+**Trazabilidad de materias primas:** La ficha de trazabilidad debe vincular el lote de la hormona utilizada con su Certificado de Análisis (CoA) original, garantizando que el principio activo cumpla las especificaciones de la Farmacopea (ej., Ph. Eur.) y esté libre de contaminantes.
 
-**Prevención de Contaminación Cruzada:** Las hormonas son principios activos de alta potencia. Es obligatorio establecer y validar Procedimientos Normalizados de Trabajo (PNTs) de limpieza exhaustivos para equipos y áreas, evitando la transferencia de residuos entre diferentes moléculas hormonales (ej., Testosterona a Estradiol).
+**Prevención de contaminación cruzada:** Las hormonas son principios activos de alta potencia. Es obligatorio establecer y validar Procedimientos Normalizados de Trabajo (PNTs) de limpieza exhaustivos para equipos y áreas, evitando la transferencia de residuos entre diferentes moléculas hormonales (ej., Testosterona a Estradiol).
 
-## Control de Calidad Analítico: Valoración y Seguridad (ICH Q3D/Q3C).
+## Control de calidad analítico: Valoración y seguridad (ICH Q3D/Q3C).
 El Control de Calidad (CC) debe asegurar la identidad molecular y la integridad posológica del principio activo hormonal:
 
 - **Valoración (Riqueza):** La cuantificación de la riqueza del principio activo es esencial. Solo una riqueza del $\mathbf{100.0\%}$ o muy cercana permite al farmacéutico dispensar la dosis exacta prescrita, sin necesidad de aplicar factores de corrección que introducen un riesgo de error en el cálculo.
-- **Control de Impurezas:** El CoA debe certificar la ausencia de riesgos toxicológicos. Esto incluye el control de Impurezas Elementales (ICH Q3D) (metales pesados) y Disolventes Residuales (ICH Q3C), asegurando que los contaminantes del proceso de síntesis estén dentro de los límites farmacéuticos aceptados.
+- **Control de impurezas:** El CoA debe certificar la ausencia de riesgos toxicológicos. Esto incluye el control de Impurezas Elementales (ICH Q3D) (metales pesados) y Disolventes Residuales (ICH Q3C), asegurando que los contaminantes del proceso de síntesis estén dentro de los límites farmacéuticos aceptados.
 
 
 
@@ -63,7 +63,7 @@ El Control de Calidad (CC) debe asegurar la identidad molecular y la integridad 
 
 La Terapia Hormonal Personalizada se fundamenta en la identidad molecular de las Hormonas Bioidénticas (HBs). La calidad y seguridad de la formulación dependen del estricto cumplimiento del RD 175/2001.
 
-Las Hormonas Bioidéntica: Son estructuralmente idénticas a las hormonas endógenas (ej., E2, P4, T), lo que garantiza una respuesta fisiológica y un metabolismo predecible.
+Hormonas utilizadas para el reemplazo hormonal: Son estructuralmente idénticas a las hormonas endógenas (ej., E2, P4, T), lo que garantiza una respuesta fisiológica y un metabolismo predecible.
 
 RD 175/2001 (BPE): Exige la trazabilidad documental completa (CoA y Ficha de Trazabilidad) y la aplicación de PNTs de limpieza para prevenir la contaminación cruzada.
 

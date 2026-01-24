@@ -1,6 +1,6 @@
 ---
-title: "Guía Avanzada de Formulación Magistral: Cumplimiento, Calidad y Terapia Hormonal"
-author: "Manuel García / MetaPharmaceutical"
+title: "Guía avanzada de Formulación Magistral: Cumplimiento, calidad y terapia hormonal"
+author: "**Manuel García / MetaPharmaceutical**"
 date: "`r format(Sys.Date(), '%d de %B de %Y')`"
 lang: es
 site: bookdown::bookdown_site
