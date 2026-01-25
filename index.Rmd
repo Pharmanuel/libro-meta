@@ -1,10 +1,9 @@
 ---
 title: "Guía avanzada de Formulación Magistral: Cumplimiento, calidad y terapia hormonal"
-author: "**Manuel García / MetaPharmaceutical**"
+author: "Manuel García | MetaPharmaceutical"
 date: "`r format(Sys.Date(), '%d de %B de %Y')`"
 lang: es
 site: bookdown::bookdown_site
-# CRÍTICO: Definición de salidas. Asegúrate de que no haya espacios extra después de gitbook
 output:
   bookdown::gitbook:
     split_by: chapter
@@ -12,13 +11,16 @@ output:
     config:
       toc:
         before: |
-          <li><a href="./">MetaPharmaceutical - Manuel García</a></li>
+          <li><a href="index.html">MetaPharmaceutical - Manuel García</a></li>
       download: ["pdf", "epub"]
   bookdown::pdf_book:
-    latex_engine: xelatex 
+    latex_engine: xelatex
     toc_depth: 3
     toc_unnumbered: false
-    # Si 'preambulo_latex.tex' no existe, elimina las siguientes tres líneas para evitar fallos de PDF.
-    # includes:
-    #   in_header: preambulo_latex.tex
 ---
+
+# Introducción {#index}
+
+Bienvenido a la **Guía avanzada de Formulación Magistral**. 
+
+Este manual ha sido diseñado por **Manuel García Hernández** para **MetaPharmaceutical** para ofrecer una visión profunda sobre el cumplimiento normativo y las buenas prácticas en la elaboración de fórmulas magistrales, con un enfoque especial en la terapia hormonal.

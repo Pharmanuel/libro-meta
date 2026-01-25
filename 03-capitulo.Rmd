@@ -3,7 +3,7 @@ output:
   pdf_document: default
   html_document: default
 ---
-# Terapia Hormonal en la Mujer II: 
+# Terapia Hormonal en la Mujer II {#terapia-hormonal-2}
   
 ## Atrofia Vulvovaginal, Estriol, DHEA y terapias tópicas.
 

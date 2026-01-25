@@ -3,7 +3,7 @@ output:
   pdf_document: default
   html_document: default
 ---
-# Introducción. marco legal y buenas prácticas de elaboración.
+# Marco legal y buenas prácticas {#intro}
   
 ## Definición de terapia hormonal de reemplazo personalizada (THR-P).
 Se define como un tratamiento de precisión basado en el uso de **Hormonas de reemplazo**, cuya eficacia está intrínsecamente ligada a la identidad molecular de la sustancia activa.

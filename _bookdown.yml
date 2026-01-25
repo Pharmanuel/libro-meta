@@ -1,4 +1,4 @@
-book_filename: "mi-guia"
+book_filename: "guia_meta"  # Usa solo una palabra corta y sin espacios
 output_dir: "docs"
 delete_merged_file: true
 language:
