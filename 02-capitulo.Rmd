@@ -1,8 +1,4 @@
----
-output:
-  pdf_document: default
-  html_document: default
----
+
 # Terapia hormonal en la mujer I {#terapia-hormonal-1}
   
 ## Manejo de la transición menopáusica: Estrógenos, Progesterona y vías de administración.

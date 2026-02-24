@@ -1,8 +1,4 @@
----
-output:
-  pdf_document: default
-  html_document: default
----
+
 # Terapia Hormonal en la Mujer II {#terapia-hormonal-2}
   
 ## Atrofia Vulvovaginal, Estriol, DHEA y terapias tópicas.
@@ -55,7 +51,7 @@ Paradójicamente, durante la menopausia, la caída de estrógenos provoca un cam
 
 La DHEA es catalogada como la "madre de todas las hormonas" y es el esteroide más abundante en el organismo humano. Producida principalmente por las glándulas suprarrenales, pero también por los testículos, ovarios, cerebro y la piel. Actúa como un precursor fundamental (aproximadamente el 40% de nuestro estrógeno y testosterona se deriva de su conversión).
 
-**1. El barómetro biológico de la edad.**
+***1. El barómetro biológico de la edad.***
 
 La DHEA es considerada el marcador biológico de la edad por excelencia debido a su patrón de declive único. Sus niveles alcanzan el punto máximo alrededor de los 20 años; a los 40 años se produce solo el 50%, y entre los 60 y 80 años los niveles caen a un 10-20% de su valor pico. Se asocia el mantenimiento de niveles óptimos con una mayor longevidad y la prevención de manifestaciones degenerativas del envejecimiento.
 
@@ -83,7 +79,7 @@ ggplot(datos_comparativos, aes(x = edad, y = niveles, color = sexo, group = sexo
   theme_minimal()
 ```
 
-**2. Beneficios sistémicos y metabólicos.**
+***2. Beneficios sistémicos y metabólicos.***
 
 Los beneficios sistémicos y metabólicos de la DHEA se fundamentan en su papel como la "hormona madre" o precursor esteroideo más abundante del organismo. Al ser la base química para la síntesis de aproximadamente el 40% de los estrógenos y la testosterona, su impacto no se limita a un solo órgano, sino que orquesta el equilibrio funcional de múltiples sistemas que declinan con la edad.
 Los ejes principales de acción sistémica y metabólica son los siguientes:
@@ -94,7 +90,7 @@ Los ejes principales de acción sistémica y metabólica son los siguientes:
 
 • Protección ósea: Estimula el crecimiento óseo tanto en la membrana interna como externa, siendo clave en la prevención y reversión de la osteoporosis.
 
-**3. Salud cerebral y cognitiva.**
+***3. Salud cerebral y cognitiva.***
 
 Esta hormona no solo actúa como un componente sistémico, sino que se posiciona como un neuroesteroide clave capaz de modular la química cerebral y revertir el deterioro cognitivo mediante los siguientes ejes de acción:
 
@@ -108,7 +104,7 @@ Esta hormona no solo actúa como un componente sistémico, sino que se posiciona
 
 En conclusión, la DHEA no solo optimiza el rendimiento del cuerpo, sino que es esencial para mantener un pensamiento lúcido, una memoria robusta y un estado emocional equilibrado a medida que envejecemos.
 
-**4. Función inmunológica y bienestar.**
+***4. Función inmunológica y bienestar.***
 
 Complementando su rol como guardián de la mente, la DHEA actúa como el pilar fundamental de la resiliencia biológica, fortaleciendo nuestras defensas naturales y restaurando la vitalidad emocional a través de los siguientes mecanismos:
 
@@ -124,7 +120,7 @@ Complementando su rol como guardián de la mente, la DHEA actúa como el pilar f
 
 • Salud sexual: La DHEA actúa como la "hormona madre" o precursor fundamental que el organismo convierte en estrógeno y testosterona según sus necesidades, lo que permite restaurar el deseo sexual (libido) en ambos sexos, mejorar la potencia eréctil en hombres y aumentar la sensibilidad de los tejidos urogenitales y la producción de feromonas; resultando en una revitalización integral de la vida íntima que se ve afectada por el envejecimiento y el agotamiento adrenal provocado por el estrés crónico.
 
-**5. Administración y dosificación.**
+***5. Administración y dosificación.***
 
 La DHEA es versátil en su aplicación, aunque existen restricciones técnicas importantes:
 
@@ -146,7 +142,7 @@ La DHEA es versátil en su aplicación, aunque existen restricciones técnicas i
 **Momento de aplicación**: Se recomienda consistentemente administrar o tomar la DHEA antes de acostarse, ya que mejora la calidad del sueño y apoya los procesos reparadores nocturnos.
 
 
-**6. Seguridad y Monitoreo Especial.**
+***6. Seguridad y Monitoreo Especial.***
 
 • Análisis clínico: El examen de laboratorio adecuado debe medir DHEA-S (Sulfato de DHEA) debido a que esta presenta una estabilidad metabólica significativamente superior en comparación con la hormona base. Mientras que la DHEA simple posee una vida media muy corta y está sujeta a marcadas fluctuaciones durante el día, la DHEA-S se mantiene en concentraciones séricas constantes y mucho más elevadas al no presentar variaciones circadianas importantes. Esto permite que la toma de muestras sea más flexible y que los resultados reflejen con mayor fidelidad la reserva funcional de la glándula suprarrenal, evitando interpretaciones erróneas que podrían derivarse de los picos y valles hormonales que ocurren tras la administración de una dosis o por el ritmo biológico natural del paciente.
 
@@ -155,7 +151,7 @@ La DHEA es versátil en su aplicación, aunque existen restricciones técnicas i
 La elección de la vía de administración es el factor farmacocinético más crítico en la Terapia Hormonal Personalizada (THP), ya que determina cómo se absorben las hormonas y qué riesgos se evitan.Las vías transdérmica y vaginal son fundamentales para maximizar la biodisponibilidad y garantizar la seguridad del paciente.
 A continuación, se detallan los aspectos clave de estas terapias:
 
-1. **La vía transdérmica:** Eficacia sistémica y seguridad.
+***1. La vía transdérmica:*** Eficacia sistémica y seguridad.
 
 La administración a través de la piel permite que las hormonas lleguen directamente al torrente sanguíneo, evitando el "primer paso hepático".
 
@@ -163,7 +159,7 @@ La administración a través de la piel permite que las hormonas lleguen directa
 
 • Áreas a evitar: Es crucial evitar zonas con tejido adiposo (como el abdomen o los muslos), ya que la grasa puede "atrapar" las hormonas, impidiendo que lleguen a la circulación sistémica y alterando el equilibrio deseado.
 
-**2. La vía vaginal:** Acción Local y soporte urogenital.
+***2. La vía vaginal:*** Acción Local y soporte urogenital.
 
 Esta vía es la preferida cuando se busca tratar síntomas específicos del tracto urogenital, minimizando la carga hormonal en el resto del cuerpo.
 
@@ -171,7 +167,7 @@ Esta vía es la preferida cuando se busca tratar síntomas específicos del trac
 
 • Testosterona para la incontinencia: La inserción vaginal de crema de testosterona (habitualmente al 2%) es el tratamiento de elección para fortalecer los músculos que rodean la uretra, permitiendo corregir la incontinencia urinaria en pocos días.
 
-**3. Tecnología de Vehículos:**
+***3. Tecnología de Vehículos:***
 
 La eficacia de una terapia tópica depende no solo de la hormona, sino del vehículo (base) que la transporta.
 
@@ -179,7 +175,7 @@ La eficacia de una terapia tópica depende no solo de la hormona, sino del vehí
 
 • Liberación Controlada: Estos vehículos han demostrado científicamente facilitar la liberación transdérmica controlada de los esteroides, asegurando que la dosis prescrita sea realmente absorbida y no se quede en la superficie de la piel.
 
-**4. Protocolo de Seguridad en la Aplicación.**
+***4. Protocolo de Seguridad en la Aplicación.***
 
 Para garantizar que estas terapias funcionen correctamente, se deben seguir pautas estrictas:
 
