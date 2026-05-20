@@ -1,0 +1,85 @@
+# Hormonas Tiroideas {#Tiroides}
+
+## T3 y T4 en formulaciones personalizadas, microdosificación y estabilidad.
+
+Es fundamental comprender que las hormonas tiroideas son los directores de orquesta del metabolismo celular. Sin una función tiroidea adecuada, ninguna célula del cuerpo puede producir energía de manera eficiente, lo que afecta desde la temperatura corporal hasta la claridad mental.
+
+Los puntos clave para introducir estas dos moléculas esenciales ( T4 y T3 ) son:
+
+**La Dualidad T4 y T3:** La glándula tiroides produce dos tipos principales de hormonas. La **T4 (tiroxina)** representa aproximadamente el 90% de la secreción glandular, pero es esencialmente una hormona de almacenamiento o inactiva. Por otro lado, la **T3 (triyodotironina)** es la forma biológicamente activa y la responsable de casi todas las funciones metabólicas, siendo entre 3 y 5 veces más potente que la T4.
+
+**El Proceso de Conversión:** Para que el cuerpo pueda utilizar la tiroides, debe convertir la T4 en T3. Este proceso de "activación" ocurre principalmente fuera de la glándula tiroides: el hígado es responsable de aproximadamente el 60% de esta conversión, seguido por los riñones y el intestino. Si estos órganos no funcionan bien o si faltan nutrientes como el **selenio**, la conversión falla y el paciente sufre síntomas de hipotiroidismo aunque su glándula produzca suficiente T4.
+
+**Impacto Sistémico:** Estas hormonas no tienen un solo órgano diana; actúan en prácticamente cada célula. Regulan el ritmo al que se queman las calorías, mantienen la temperatura corporal, controlan el colesterol, estimulan el crecimiento del cabello y son vitales para la memoria y la velocidad del pensamiento.
+
+**El Gran Error Clínico:** La medicina convencional suele centrarse únicamente en medir la T4 y la TSH (hormona estimulante de la tiroides). Sin embargo, las fuentes advierten que muchos pacientes tienen niveles de T4 "normales" en los análisis pero se sienten profundamente fatigados porque su cuerpo es incapaz de convertir esa T4 en la T3 activa. Es lo que se conoce a veces como "hipotiroidismo celular" o secundario.
+
+En resumen, no se puede tratar la tiroides simplemente "rellenando" el tanque con T4 sintética (como Synthroid o Levotiroxina); el éxito clínico depende de asegurar que la T3 activa llegue al núcleo de las células para encender el motor metabólico.
+
+##  Formulaciones Personalizadas y T3 de Liberación Prolongada.
+Debido a la dificultad de conseguir T3 comercializada y de que además la que se consigue por ejemplo en EEUU ( Cytomel) es de acción rápida y corta duración (aproximadamente tres horas), lo que puede provocar fluctuaciones bruscas de energía, se recomiendan el uso de fórmulas magistrales personalizadas:
+
+**T3 - Liberación prolongada:** Las farmacias formulistas pueden preparar T3 en cápsulas de liberación prolongada, lo que permite mantener niveles estables en sangre con una o dos tomas diarias.
+
+**Combinaciones T3/T4:** El enfoque más exitoso suele ser una combinación de ambas hormonas, permitiendo que el cuerpo disponga tanto de la forma activa inmediata como de una reserva para conversión.
+
+**Fórmula tipo:**
+
+      T4.......38 mcg
+      T3.......9  mcg
+
+      Cápsulas liberacion prolongada nº 100
+
+
+## Microdosificación y Ajuste Progresivo (Fine-Tuning).
+
+Para el éxito clínico en el manejo de las hormonas tiroideas, especialmente cuando se introduce la T3 (triyodotironina), la regla de oro es el principio de “comenzar con dosis bajas e ir despacio” (start low, go slow).
+Debido a que la T3 es la forma biológicamente activa y de acción rápida, un exceso inicial puede provocar efectos secundarios incómodos, lo que hace que la microdosificación y el ajuste progresivo sean esenciales.
+
+**- Dosis inicial de T3:** Se recomienda iniciar con dosis muy pequeñas, como 7.5 mcg de T3 de liberación prolongada, una o dos veces al día.
+
+**- Dosis de T4:** A menudo se combina con dosis estándar de T4 (levotiroxina), como 0.125 mg, ajustándolas según la respuesta individual.
+
+
+El ajuste de la dosis no debe ser abrupto. El cuerpo requiere tiempo para adaptarse al nuevo nivel metabólico.
+
+**- Intervalos de ajuste:** Las dosis deben incrementarse gradualmente cada 10 a 14 días.
+Este periodo permite observar cómo reacciona el sistema cardiovascular y el sistema nervioso antes de añadir más hormona.
+
+Vigilancia de efectos secundarios: Durante este proceso se debe monitorizar la aparición de palpitaciones, nerviosismo, temblores o dolores de cabeza, señales de que la dosis podría estar aumentando demasiado rápido para la tolerancia del paciente.
+
+**Monitorización Basada en Síntomas vs. Laboratorio.**
+
+Aunque los análisis de sangre son útiles, el ajuste fino depende de la clínica del paciente, ya que los rangos de "normalidad" del laboratorio son a menudo demasiado amplios y arbitrarios.
+
+**- Indicadores de mejoría:** Se considera que se está alcanzando la dosis óptima cuando desaparecen síntomas como la fatiga matutina, la piel seca, las uñas quebradizas y la intolerancia al frío.
+Temperatura corporal: Un barómetro físico clave es la temperatura basal; si el paciente sigue sintiéndose "frío" (especialmente por la noche), es un indicio de que aún requiere un ajuste al alza.
+Claridad mental: El cese de la "niebla cerebral" y la recuperación de la velocidad del pensamiento son signos de que la T3 está llegando eficazmente al cerebro.
+
+
+## Estabilidad y Calidad Farmacéutica.
+
+La formulación de hormonas tiroideas presenta desafíos de estabilidad que requieren rigor técnico en la farmacia formulista:
+
+**- Estabilidad del Principio Activo (API):** Factores como el orden de mezcla y la inclusión de solubilizantes son críticos. Por ejemplo, en preparaciones tópicas, si el API cristaliza fuera de la solución, su biodisponibilidad y eficacia disminuyen drásticamente.
+
+**- El Reto de trabajar en microgramos:** Dado que las hormonas tiroideas son extremadamente potentes y se dosifican en microgramos (mcg), cualquier desviación mínima en la mezcla puede resultar en una sobredosis o en una dosis ineficaz.
+
+**- Precisión en la Mezcla:** Una mezcla no uniforme puede crear "bolsas" de cristales hormonales dentro de la cápsula o el vehículo, lo que provocaría una liberación errática de la hormona en el organismo.
+
+**- Variabilidad entre Farmacias Formulistas:** Estudios han demostrado que la potencia de las preparaciones hormonales magistrales puede variar significativamente entre distintos farmacias si no se siguen estándares rigurosos, con desviaciones registradas de hasta un 30% respecto a la etiqueta.
+
+**- Influencias Externas y Estabilidad de la Conversión Metabólica:** La estabilidad del tratamiento no solo depende de la cápsula, sino del entorno bioquímico del paciente, que puede bloquear la conversión de la hormona de almacenamiento (T4) a la forma activa (T3).
+
+- Bloqueadores Farmacológicos:
+Estatinas: Medicamentos para el colesterol (como Lipitor o Zocor) disminuyen los niveles de coenzima Q-10, un factor esencial para la conversión de hormonas tiroideas.
+
+- Beta-bloqueantes: Fármacos para la presión (como Atenolol o Lopressor) actúan como agentes "anti-tiroideos" al impedir directamente la conversión de T4 en T3 activa.
+
+- Soporte Nutricional Crítico: La falta de materias primas específicas desestabiliza el motor metabólico. Se requiere de Selenio, Zinc, Hierro y aminoácidos como la tirosina y cisteína para que las enzimas deiodinasas (interruptores) activen la hormona.
+
+- El Factor Yodo: El yodo es indispensable para la secreción tiroidea, pero debe manejarse con precaución; un exceso puede bloquear la glándula, por lo que debe suplementarse siempre en combinación con selenio para proteger el tejido.
+
+**Resumen para el clínico.**
+
+Para un tratamiento tiroideo exitoso, el farmacéutico y el médico deben priorizar la forma activa T3, utilizar vehículos de liberación sostenida para evitar picos plasmáticos y asegurar la estabilidad de la fórmula protegiéndola de la humedad y temperaturas inadecuadas.
