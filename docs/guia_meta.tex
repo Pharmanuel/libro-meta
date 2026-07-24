@@ -39,6 +39,7 @@
   \KOMAoptions{parskip=half}}
 \makeatother
 \usepackage{longtable,booktabs,array}
+\newcounter{none} % for unnumbered tables
 \usepackage{calc} % for calculating minipage widths
 % Correct order of tables after \paragraph or \subparagraph
 \usepackage{etoolbox}
@@ -64,13 +65,13 @@
 \def\fps@figure{htbp}
 \makeatother
 \ifLuaTeX
-\usepackage[bidi=basic]{babel}
+\usepackage[bidi=basic,shorthands=off]{babel}
 \else
-\usepackage[bidi=default]{babel}
+\usepackage[bidi=default,shorthands=off]{babel}
 \fi
-% get rid of language-specific shorthands (see #6817):
-\let\LanguageShortHands\languageshorthands
-\def\languageshorthands#1{}
+\ifLuaTeX
+  \usepackage{selnolig} % disable illegal ligatures
+\fi
 \setlength{\emergencystretch}{3em} % prevent overfull lines
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
@@ -81,7 +82,7 @@
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \urlstyle{same}
 \hypersetup{
-  pdftitle={Guía avanzada de Formulación Magistral: Cumplimiento, calidad y terapia hormonal},
+  pdftitle={Guía avanzada de Formulación Magistral: Cumplimiento{,} calidad y terapia hormonal},
   pdfauthor={Manuel García \textbar{} MetaPharmaceutical},
   pdflang={es},
   hidelinks,
@@ -89,7 +90,7 @@
 
 \title{Guía avanzada de Formulación Magistral: Cumplimiento, calidad y terapia hormonal}
 \author{Manuel García \textbar{} MetaPharmaceutical}
-\date{25 de enero de 2026}
+\date{24 de junio de 2026}
 
 \begin{document}
 \maketitle
@@ -371,6 +372,7 @@ El estradiol es una hormona lipogénica (estimula el almacenamiento de grasa y c
 
 Para el manejo de la menopausia, las dosis deben ser bajas y ajustadas según la sintomatología:
 
+{\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
   >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
@@ -390,6 +392,7 @@ Indicación Específica
 \textbf{Transdérmica} & 0,5 mg - 1 mg / día & Uso general / sistémico \\
 \textbf{Vaginal} & 1 mg - 2 mg / día & Atrofia (continuo para regenerar el epitelio) \\
 \end{longtable}
+}
 
 • Fórmulas Combinadas: A menudo se prescribe como Bi-est (mezcla de Estradiol y Estriol), buscando reducir la carga total de E2 mediante la combinación con un estrógeno más débil y protector como el E3.
 
@@ -427,6 +430,7 @@ Dado que las cremas de estriol no suelen estar disponibles como productos indust
 
 Las dosis recomendadas en la práctica clínica son las siguientes:
 
+{\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}lll@{}}
 \toprule\noalign{}
 Vía de Administración & Mujer Premenopáusica & Mujer Menopáusica \\
@@ -437,6 +441,7 @@ Vía de Administración & Mujer Premenopáusica & Mujer Menopáusica \\
 \textbf{Transdérmica} & 0,5 - 1 mg / día & 1 - 3 mg / día \\
 \textbf{Vaginal} & 0,3 - 0,5 mg (cíclico) & 1 - 2 mg (continuo) \\
 \end{longtable}
+}
 
 En conclusión, el estriol es un componente indispensable de la THR-P femenina, proporcionando una solución eficaz y de bajo riesgo para la salud urogenital y actuando como un factor de seguridad cuando se utiliza en terapias combinadas.
 
@@ -494,6 +499,7 @@ La selección de la ruta de administración es el factor de seguridad más crít
 
 Las dosis recomendadas en la práctica clínica son las siguientes:
 
+{\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
   >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
@@ -517,6 +523,7 @@ Notas Clínicas y de Seguridad
 \textbf{Transdérmica} & 10 -- 50 mg/día & 5 -- 20 mg/día & Vía preferida para evitar degradación hepática y estabilizar niveles séricos. \\
 \textbf{Vaginal} & Variable & No aplica & Concentración local alta en tejido uterino y soporte en la gestación. \\
 \end{longtable}
+}
 
 \section{Terapia Hormonal en la Mujer II}\label{terapia-hormonal-2}
 
@@ -571,13 +578,13 @@ Paradójicamente, durante la menopausia, la caída de estrógenos provoca un cam
 
 La DHEA es catalogada como la ``madre de todas las hormonas'' y es el esteroide más abundante en el organismo humano. Producida principalmente por las glándulas suprarrenales, pero también por los testículos, ovarios, cerebro y la piel. Actúa como un precursor fundamental (aproximadamente el 40\% de nuestro estrógeno y testosterona se deriva de su conversión).
 
-\textbf{1. El barómetro biológico de la edad.}
+\textbf{\emph{1. El barómetro biológico de la edad.}}
 
 La DHEA es considerada el marcador biológico de la edad por excelencia debido a su patrón de declive único. Sus niveles alcanzan el punto máximo alrededor de los 20 años; a los 40 años se produce solo el 50\%, y entre los 60 y 80 años los niveles caen a un 10-20\% de su valor pico. Se asocia el mantenimiento de niveles óptimos con una mayor longevidad y la prevención de manifestaciones degenerativas del envejecimiento.
 
 \begin{center}\includegraphics{guia_meta_files/figure-latex/dhea-grafica-1} \end{center}
 
-\textbf{2. Beneficios sistémicos y metabólicos.}
+\textbf{\emph{2. Beneficios sistémicos y metabólicos.}}
 
 Los beneficios sistémicos y metabólicos de la DHEA se fundamentan en su papel como la ``hormona madre'' o precursor esteroideo más abundante del organismo. Al ser la base química para la síntesis de aproximadamente el 40\% de los estrógenos y la testosterona, su impacto no se limita a un solo órgano, sino que orquesta el equilibrio funcional de múltiples sistemas que declinan con la edad.
 Los ejes principales de acción sistémica y metabólica son los siguientes:
@@ -588,7 +595,7 @@ Los ejes principales de acción sistémica y metabólica son los siguientes:
 
 • Protección ósea: Estimula el crecimiento óseo tanto en la membrana interna como externa, siendo clave en la prevención y reversión de la osteoporosis.
 
-\textbf{3. Salud cerebral y cognitiva.}
+\textbf{\emph{3. Salud cerebral y cognitiva.}}
 
 Esta hormona no solo actúa como un componente sistémico, sino que se posiciona como un neuroesteroide clave capaz de modular la química cerebral y revertir el deterioro cognitivo mediante los siguientes ejes de acción:
 
@@ -602,7 +609,7 @@ Esta hormona no solo actúa como un componente sistémico, sino que se posiciona
 
 En conclusión, la DHEA no solo optimiza el rendimiento del cuerpo, sino que es esencial para mantener un pensamiento lúcido, una memoria robusta y un estado emocional equilibrado a medida que envejecemos.
 
-\textbf{4. Función inmunológica y bienestar.}
+\textbf{\emph{4. Función inmunológica y bienestar.}}
 
 Complementando su rol como guardián de la mente, la DHEA actúa como el pilar fundamental de la resiliencia biológica, fortaleciendo nuestras defensas naturales y restaurando la vitalidad emocional a través de los siguientes mecanismos:
 
@@ -618,7 +625,7 @@ Complementando su rol como guardián de la mente, la DHEA actúa como el pilar f
 
 • Salud sexual: La DHEA actúa como la ``hormona madre'' o precursor fundamental que el organismo convierte en estrógeno y testosterona según sus necesidades, lo que permite restaurar el deseo sexual (libido) en ambos sexos, mejorar la potencia eréctil en hombres y aumentar la sensibilidad de los tejidos urogenitales y la producción de feromonas; resultando en una revitalización integral de la vida íntima que se ve afectada por el envejecimiento y el agotamiento adrenal provocado por el estrés crónico.
 
-\textbf{5. Administración y dosificación.}
+\textbf{\emph{5. Administración y dosificación.}}
 
 La DHEA es versátil en su aplicación, aunque existen restricciones técnicas importantes:
 
@@ -630,6 +637,7 @@ La DHEA es versátil en su aplicación, aunque existen restricciones técnicas i
 
 \textbf{• Dosis Típicas para administar DHEA:}
 
+{\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
   >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
@@ -653,10 +661,11 @@ Ajuste por Nivel Bajo
 \textbf{Mujeres (Vaginal)} & Acción Local & 2 -- 6 mg/día & Para resequedad y lubricación \\
 \textbf{Hombres (Sistémico)} & 400 -- 500 mcg/dl & 25 -- 50 mg/día & \textless100 mcg/dl: 50mg; \textgreater100 mcg/dl: 25mg \\
 \end{longtable}
+}
 
 \textbf{Momento de aplicación}: Se recomienda consistentemente administrar o tomar la DHEA antes de acostarse, ya que mejora la calidad del sueño y apoya los procesos reparadores nocturnos.
 
-\textbf{6. Seguridad y Monitoreo Especial.}
+\textbf{\emph{6. Seguridad y Monitoreo Especial.}}
 
 • Análisis clínico: El examen de laboratorio adecuado debe medir DHEA-S (Sulfato de DHEA) debido a que esta presenta una estabilidad metabólica significativamente superior en comparación con la hormona base. Mientras que la DHEA simple posee una vida media muy corta y está sujeta a marcadas fluctuaciones durante el día, la DHEA-S se mantiene en concentraciones séricas constantes y mucho más elevadas al no presentar variaciones circadianas importantes. Esto permite que la toma de muestras sea más flexible y que los resultados reflejen con mayor fidelidad la reserva funcional de la glándula suprarrenal, evitando interpretaciones erróneas que podrían derivarse de los picos y valles hormonales que ocurren tras la administración de una dosis o por el ritmo biológico natural del paciente.
 
@@ -665,12 +674,7 @@ Ajuste por Nivel Bajo
 La elección de la vía de administración es el factor farmacocinético más crítico en la Terapia Hormonal Personalizada (THP), ya que determina cómo se absorben las hormonas y qué riesgos se evitan.Las vías transdérmica y vaginal son fundamentales para maximizar la biodisponibilidad y garantizar la seguridad del paciente.
 A continuación, se detallan los aspectos clave de estas terapias:
 
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\tightlist
-\item
-  \textbf{La vía transdérmica:} Eficacia sistémica y seguridad.
-\end{enumerate}
+\textbf{\emph{1. La vía transdérmica:}} Eficacia sistémica y seguridad.
 
 La administración a través de la piel permite que las hormonas lleguen directamente al torrente sanguíneo, evitando el ``primer paso hepático''.
 
@@ -678,7 +682,7 @@ La administración a través de la piel permite que las hormonas lleguen directa
 
 • Áreas a evitar: Es crucial evitar zonas con tejido adiposo (como el abdomen o los muslos), ya que la grasa puede ``atrapar'' las hormonas, impidiendo que lleguen a la circulación sistémica y alterando el equilibrio deseado.
 
-\textbf{2. La vía vaginal:} Acción Local y soporte urogenital.
+\textbf{\emph{2. La vía vaginal:}} Acción Local y soporte urogenital.
 
 Esta vía es la preferida cuando se busca tratar síntomas específicos del tracto urogenital, minimizando la carga hormonal en el resto del cuerpo.
 
@@ -686,7 +690,7 @@ Esta vía es la preferida cuando se busca tratar síntomas específicos del trac
 
 • Testosterona para la incontinencia: La inserción vaginal de crema de testosterona (habitualmente al 2\%) es el tratamiento de elección para fortalecer los músculos que rodean la uretra, permitiendo corregir la incontinencia urinaria en pocos días.
 
-\textbf{3. Tecnología de Vehículos:}
+\textbf{\emph{3. Tecnología de Vehículos:}}
 
 La eficacia de una terapia tópica depende no solo de la hormona, sino del vehículo (base) que la transporta.
 
@@ -694,7 +698,7 @@ La eficacia de una terapia tópica depende no solo de la hormona, sino del vehí
 
 • Liberación Controlada: Estos vehículos han demostrado científicamente facilitar la liberación transdérmica controlada de los esteroides, asegurando que la dosis prescrita sea realmente absorbida y no se quede en la superficie de la piel.
 
-\textbf{4. Protocolo de Seguridad en la Aplicación.}
+\textbf{\emph{4. Protocolo de Seguridad en la Aplicación.}}
 
 Para garantizar que estas terapias funcionen correctamente, se deben seguir pautas estrictas:
 
@@ -704,5 +708,2141 @@ Para garantizar que estas terapias funcionen correctamente, se deben seguir paut
 
 • Prevención de transferencia: Después de aplicar hormonas transdérmicas, se debe evitar el contacto de la zona con otras personas (pareja o niños) para prevenir la absorción accidental.
 Este enfoque tópico permite una reposición fisiológica precisa, imitando los niveles naturales del cuerpo y minimizando los efectos secundarios asociados a las hormonas sintéticas u orales.
+
+\section{Terapia hormonal en el hombre I}\label{hombre1}
+
+\subsection{Testosterona e hipogonadismo.}\label{testosterona-e-hipogonadismo.}
+
+La testosterona es una hormona esteroidea del grupo de los andrógenos, producida principalmente en los testículos y ovarios, con contribuciones menores de las glándulas suprarrenales. Actúa como un potente esteroide anabólico que regula el metabolismo, la función cognitiva y la salud estructural.
+
+\textbf{\emph{1. El Hipogonadismo y la Andropausia.}}
+
+El hipogonadismo se define como la incapacidad de los testículos para producir niveles fisiológicos de testosterona y una cantidad normal de espermatozoides.
+
+• Fisiopatología: El proceso es regulado por el hipotálamo y la glándula pituitaria; esta última secreta la hormona luteinizante (LH) para estimular a las células de Leydig en los testículos.
+
+• Hipogonadismo Secundario: Ocurre cuando la pituitaria no envía la señal adecuada (LH) para producir la hormona, un cuadro similar al hipotiroidismo secundario.
+
+• Andropausia: A partir de los 30 años, los niveles de testosterona en el hombre comienzan a declinar constantemente. Al llegar a los 50 años, se manifiesta la andropausia, caracterizada por pérdida de energía, libido, masa muscular y aumento de grasa abdominal.
+
+\textbf{\emph{2. Funciones fundamentales en el hombre de la Testosterona}}
+
+En el hombre, la testosterona es el motor de la virilidad y la vitalidad, pero sus funciones van mucho más allá de lo sexual:
+
+• Salud Cardiovascular: El músculo cardíaco posee más sitios receptores de testosterona que cualquier otro músculo del cuerpo; su presencia ayuda a prevenir la insuficiencia cardíaca congestiva y a fortalecer el sistema de conducción del corazón.
+
+• Protección Cerebral: Es la hormona principal para evitar el Alzheimer, además de ser crucial para mantener el enfoque, la claridad mental y una actitud asertiva ante el estrés.
+
+• Masa Ósea y Muscular: Previene y revierte la osteoporosis al fortalecer la densidad ósea y es indispensable para construir y mantener el tono muscular, evitando la flacidez y el aumento de grasa abdominal.
+
+• Bienestar Emocional: Su deficiencia está estrechamente ligada a la depresión andropáusica, irritabilidad y falta de motivación.
+
+\textbf{\emph{3. Importancia crítica en la mujer}}
+
+Las mujeres también dependen de niveles óptimos de testosterona para una salud integral:
+
+• Salud sexual y libido: Es clave para restaurar el deseo sexual y la capacidad de alcanzar el orgasmo, aumentando la sensibilidad de los tejidos genitales.
+
+• Incontinencia urinaria: Se utiliza con éxito para fortalecer los músculos que rodean la uretra; aplicada vaginalmente y combinada con ejercicios de Kegel, puede eliminar la incontinencia en solo 6 a 7 días.
+
+• Energía y composición corporal: Ayuda a las mujeres a mantener la fuerza muscular, reduce la celulitis al reafirmar los tejidos y proporciona la asertividad necesaria para manejar cargas de trabajo exigentes.
+
+\textbf{\emph{4. Vías de administración y dosificación}}
+
+Se recomienda \textbf{evitar la vía oral} debido al metabolismo de primer paso hepático. Los métodos preferidos imitan la secreción fisiológica:
+
+• Vía Transdérmica (Preferida): Permite la absorción directa al torrente sanguíneo, minimizando riesgos vasculares.
+
+• Vía Vaginal: Específicamente útil en mujeres para tratar la \textbf{atrofia urogenital y la incontinencia}, utilizando cremas al 2\%.
+
+\textbf{Reglas de Oro para la Aplicación Tópica.}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \textbf{Zonas sin vello:} Debe aplicarse en áreas como la cara interna de los brazos, hombros, detrás de las rodillas o tobillos. Los folículos pilosos contienen enzimas (5-alfa reductasa) que convierten la testosterona en DHT, aumentando el riesgo de calvicie y problemas de próstata.
+\item
+  \textbf{Evitar el tejido graso:}
+  Las hormonas como la testosterona, la progesterona y los estrógenos son hormonas esteroideas, lo que significa que su estructura bioquímica se deriva del colesterol y son sustancias \textbf{liposolubles}, es decir, que se disuelven y tienen una afinidad natural por las grasas. Debido a esta naturaleza ``amiga de la grasa'', si aplicamos estas cremas en zonas con mucho tejido adiposo, como el abdomen o los muslos, las moléculas de la hormona tienden a ser ``atrapadas'' y retenidas en la grasa subcutánea en lugar de movilizarse. Imagine que la grasa actúa como una esponja que secuestra la hormona, impidiendo que esta pueda cruzar hacia los pequeños vasos sanguíneos para viajar por el cuerpo. Para que el tratamiento funcione, necesitamos que la hormona llegue rápidamente a la circulación sistémica, por lo que debemos aplicarla siempre en zonas de piel delgada y bien vascularizada, como la cara interna de las muñecas, los antebrazos o detrás de las rodillas. En estos lugares, al no haber grandes depósitos de grasa que las retengan, las hormonas pasan directamente al torrente sanguíneo, asegurando que la dosis que recetó el médico cumpla su función de devolverle el equilibrio al organismo.
+\end{enumerate}
+
+\textbf{Rango de dosificación de la Testosterona:}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Vía / Método de Administración
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Dosis Típica
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Indicaciones y Notas Clínicas
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\textbf{Transdérmica (Hombres)} & 40 -- 100 mg / día & Aplicar en áreas sin vello para absorción sistémica. \\
+\textbf{Transdérmica (Mujeres)} & 2 -- 10 mg / día & Dosis ajustada para evitar efectos de virilización. \\
+\textbf{Vaginal (Mujeres)} & Crema al 2\% & Tratamiento de atrofia urogenital e incontinencia. \\
+\end{longtable}
+}
+
+\textbf{\emph{5. Metabolismo, Seguridad y Complementos de Apoyo}}
+
+La testosterona es una hormona dinámica que puede desviarse hacia rutas metabólicas adversas si no existe un equilibrio enzimático adecuado. Para garantizar que el tratamiento cumpla su función vital sin generar efectos secundarios, se recomienda el uso de los siguientes inhibidores y nutrientes de apoyo:
+
+\textbf{A. Control de la Aromatización (Conversión a Estradiol).}
+Cuando la enzima aromatasa es excesiva, la testosterona se transforma en estradiol. En el hombre, este desequilibrio puede provocar ginecomastia, retención de líquidos y un mayor riesgo de inflamación o cáncer de próstata.
+
+• Crisina: Potente inhibidor de la aromatasa. Se puede incluir al 10\% en la fórmula de la crema de testosterona o tomar 100 mg al día por vía oral.
+
+• Zinc (Bisglicinato): Este mineral bloquea de forma natural la aromatasa, ayudando a mantener bajos los niveles de estrógeno. Además de proteger la próstata, previene la degeneración macular. Dosis: 25 a 50 mg al día.
+
+• Progesterona: Actúa como un escudo natural contra la aromatasa en hombres mayores de 50 años, protegiendo el tejido prostático. Dosis: 10 a 50 mg (vía oral) o 5 a 20 mg (vía transdérmica).
+
+• Anastrozol (Arimidex): Intervención farmacológica de precisión para casos de estradiol elevado. Se utilizan dosis muy bajas de 50 mcg al día (preparado de forma magistral) o entre 0.25 y 0.5 mg.
+
+\textbf{B. Control de la DHT y Protección Prostática.}
+
+La enzima 5-alfa reductasa puede convertir la testosterona en dihidrotestosterona (DHT). Si sus niveles se disparan, es la responsable directa de la calvicie masculina y del crecimiento (hipertrofia) de la próstata.
+
+• Saw Palmetto, Pygeum y Beta-sitosterol: Estos extractos botánicos ayudan a regular los niveles de DHT. Se recomienda una dosis de 300 mg al día de beta-sitosterol para el soporte prostático.
+
+• Selenio: Nutriente esencial con doble función: es un potente antioxidante preventivo para la próstata e importante para que la tiroides convierta la hormona T4 en su forma activa T3. Dosis: 200 mcg al día.
+
+• Vitamina D3: Más que una vitamina, es una pro-hormona vital para la prevención oncológica prostática. Dosis: 5,000 UI para prevención y hasta 20,000 UI para tratamiento (pudiendo llegar a 50,000 UI bajo supervisión médica).
+
+\textbf{\emph{6. Monitorización clínica y analítica}}
+
+La monitorización debe ser dinámica, tratando al paciente y no solo a los resultados de laboratorio.
+
+\textbf{A. Parámetros analíticos obligatorios:}
+
+• Testosterona Libre: Es la fracción biológicamente activa y el marcador más importante. Los niveles objetivo suelen ser los de un varón sano de 40 años (50 a 210 pg/ml).
+
+• Testosterona Total: Rango normal de 250 a 1000 ng/dl.
+
+• Vigilancia de Metabolitos: Es importante medir Estradiol (mantener \textless{} 20-40 pg/ml en hombres) y DHT.
+
+• Salud Prostática: Control de PSA Total y PSA Libre. Un PSA mayor a 2.5 ng/ml se considera elevado hoy en día y requiere supervisión estrecha.
+
+• Momento de la Prueba: Realizar los análisis temprano por la mañana, cuando los niveles son fisiológicamente más altos.
+
+\textbf{B. Evaluación de síntomas (Monitorización clínica).}
+
+Los indicadores de una dosis óptima incluyen:
+
+• Función sexual: Retorno del deseo y mejora de la calidad de las erecciones.
+
+• Erecciones matutinas: Excelente indicador clínico de niveles adecuados de Testosterona en hombres.
+
+• Estado de ánimo: La testosterona aporta tenacidad mental y asertividad. Un indicador de mejoría es el paso de una actitud ``solemne y sobrecargada'' a una de confianza y capacidad para enfrentar dificultades sin desmoronarse.
+
+\section{Terapias combinadas y coadyuvantes en disfunción sexual masculina.}\label{Terapias}
+
+La disfunción sexual masculina es un fenómeno complejo que trasciende la simple medición de los niveles de testosterona en sangre, ya que la respuesta sexual funciona como una ``sinfonía biológica'' donde diversas hormonas y neurotransmisores deben actuar de forma coordinada.
+
+Un abordaje terapéutico exitoso requiere entender que, si bien la testosterona es el motor del deseo, su eficacia depende de un equilibrio sistémico y de la integridad de otros ejes hormonales.
+
+Para restaurar la función sexual de manera efectiva, el diagnóstico no debe limitarse a tratar síntomas aislados, sino a identificar y corregir las causas subyacentes que bloquean la respuesta biológica:
+
+\begin{itemize}
+\item
+  Factores Vasculares y Mecánicos: La erección depende de la hemodinámica circulatoria y la acumulación de sangre en los cuerpos cavernosos.Deficiencias hormonales crónicas pueden afectar la salud de las arterias, dificultando la firmeza y el mantenimiento del acto sexual.
+\item
+  Factores Neurológicos y Emocionales: Las hormonas actúan como ``mensajeros del amor'' y regulan neurotransmisores en el cerebro, que es el órgano sexual más potente.
+  Sin un soporte neuroendocrino adecuado, el deseo se apaga y la capacidad de convertir la fantasía en acción física desaparece.
+\item
+  Interferencias Farmacológicas: Es imperativo evaluar el impacto de medicamentos preexistentes, como los antihipertensivos o antidepresivos, que son causas documentadas de impotencia y pueden anular los beneficios de cualquier terapia de reemplazo.
+\end{itemize}
+
+El Rol de las Terapias Combinadas: La evidencia clínica sugiere que el éxito rara vez se logra con una hormona en solitario. La combinación estratégica de Testosterona con coadyuvantes como la DHEA ---conocida por mejorar la potencia eréctil y el bienestar psicológico--- y la Hormona del Crecimiento (GH), esencial para la resistencia física, permite un retorno más completo a la vitalidad sexual.
+
+Este capítulo profundiza en cómo el uso de fórmulas combinadas y nutrientes específicos (como el zinc y antioxidantes) potencia la respuesta tisular y permite al varón recuperar no solo su capacidad sexual, sino su asertividad y energía vital de forma segura y fisiológica.
+
+\subsection{El Enfoque Multifactorial de la Función Sexual}\label{el-enfoque-multifactorial-de-la-funciuxf3n-sexual}
+
+La respuesta sexual masculina no es un evento aislado producido por una sola sustancia, sino una ``orquesta'' biológica donde hormonas y neurotransmisores deben actuar en perfecta sincronía.
+Para que un varón recupere su vitalidad plena, es necesario entender que la testosterona es solo el director de esta sinfonía, pero requiere de otros ``músicos'' para ejecutar el acto físico con éxito.
+A continuación, se detalla este enfoque multifactorial basado en la sinergia de los componentes clave:
+
+\textbf{- Deseo y excitación:} El impulso inicial.
+El proceso comienza en el cerebro, el órgano sexual más potente.
+
+Testosterona: Es la chispa que inicia el deseo, promueve las fantasías sexuales y aumenta la sensibilidad de los órganos genitales. Sin niveles óptimos, el varón pierde el interés por la vida y la libido desaparece.
+
+Dopamina y Noradrenalina: Estos neurotransmisores son responsables de la atracción física inicial y la respuesta de alerta necesaria para la actividad sexual.
+
+Cortisol: Lejos de ser solo la ``hormona del estrés'', en el contexto sexual el cortisol es el encargado de suministrar la energía y el entusiasmo necesarios para convertir el deseo en acción física.
+
+\textbf{- Mecanismo de la erección:} Hemodinámica y potencia.
+Una vez despertado el deseo, la ejecución física depende de la capacidad del cuerpo para movilizar y retener sangre en los cuerpos cavernosos.
+
+Vasopresina: Esta hormona ayuda a que la sangre se acumule de forma eficiente en el pene, facilitando el llenado necesario para la erección.
+
+Acetilcolina: Actúa dilatando los vasos sanguíneos para permitir un flujo de entrada rápido y masivo de sangre hacia los tejidos genitales.
+
+DHEA (Dehidroepiandrosterona): Conocida como la ``hormona de la alegría de vivir'', la DHEA potencia los efectos de la testosterona.Se ha demostrado que su suplementación aumenta significativamente la potencia eréctil en hombres con disfunción, mejorando además el bienestar psicológico necesario para el desempeño.
+
+\textbf{- Resistencia y firmeza:} El rol de la GH.
+La calidad del acto sexual no depende solo de la erección inicial, sino de la capacidad de mantenerla y de la resistencia física global.
+
+Hormona del Crecimiento (GH/HGH): Es la responsable de la resistencia física y de mantener el tono y volumen de los tejidos genitales.
+La GH fomenta una erección más firme y prolongada, permitiendo además una recuperación más rápida tras el esfuerzo físico.
+
+Efecto Sinérgico: La falta de GH se manifiesta clínicamente como fatiga persistente y flacidez abdominal, factores que impactan directamente en la autoconfianza y la capacidad de resistencia durante el coito.
+
+\textbf{- Coadyuvantes y factores de equilibrio.}
+Para que esta orquesta funcione, el terreno metabólico debe estar preparado:
+
+Apoyo Nutricional: Nutrientes como el Zinc y la Vitamina E son esenciales para el funcionamiento de las glándulas sexuales y para mantener los tejidos flexibles y elásticos.
+
+Monitorización de Metabolitos: Es vital vigilar que la testosterona no se desvíe hacia el estradiol (que puede disminuir el deseo) o un exceso de DHT, manteniendo el equilibrio mediante inhibidores naturales como la crisina o la progesterona.
+
+En resumen, tratar la disfunción sexual masculina únicamente con testosterona es un error común; el éxito clínico reside en equilibrar simultáneamente el eje adrenal (cortisol/DHEA), el eje pituitario (GH/vasopresina) y el soporte nutricional adecuado.
+
+\subsection{Terapias Combinadas: El Rol de la DHEA y la Testosterona}\label{terapias-combinadas-el-rol-de-la-dhea-y-la-testosterona}
+
+La evidencia clínica y los estudios de longevidad sugieren que el éxito del reemplazo hormonal rara vez se encuentra en una sola hormona; por el contrario, la combinación de niveles fisiológicos de testosterona y DHEA suele ser muy superior a la monoterapia. Esta sinergia permite no solo restaurar la función sexual, sino también revertir marcadores biológicos del envejecimiento.
+
+\textbf{- DHEA como coadyuvante:} La ``hormona de la alegría de vivir''.
+
+La DHEA (dehidroepiandrosterona) es la hormona esteroide más abundante en el cuerpo durante la juventud, pero sus niveles declinan linealmente con la edad, llegando a ser apenas un 10-20\% del pico máximo al alcanzar los 60 años.Es conocida como la ``hormona de la alegría de vivir'' debido a su impacto directo en el bienestar físico y psicológico.
+
+Potenciación de la Testosterona: La DHEA actúa como un precursor que el cuerpo puede convertir en testosterona según sea necesario, potenciando sus efectos anabólicos y revitalizantes.
+Dosis recomendada: Para hombres con niveles bajos (DHEA-S inferior a 100 mcg/dl), se recomienda una dosis de 25 a 50 mg diarios, preferiblemente por la noche, para restaurar la vitalidad característica de los 40 años.
+
+\textbf{- Sinergia en el metabolismo y la composición corporal.}
+
+Ambas hormonas trabajan en equipo para reprogramar el metabolismo masculino, atacando los signos físicos que más afectan la autoconfianza del varón:
+
+Reducción de grasa abdominal: Tanto la testosterona como la DHEA son eficaces para disminuir los niveles de insulina, la hormona responsable de almacenar grasa en la parte media del cuerpo. Esta combinación ayuda a eliminar la ``panza de la edad mediana'' y los depósitos de grasa lipogénica.
+
+Mejora de la masa muscular: Mientras la testosterona construye el tejido muscular y aumenta el tono, la DHEA fortalece los músculos y apoya la estructura proteica del cuerpo.
+
+Impacto en la autoconfianza: Un cuerpo con mejor composición física (menos grasa y más músculo) genera un aumento en la asertividad, la tenacidad mental y la autoestima. Esta mejora en la imagen corporal y el vigor mental se traduce directamente en un mejor desempeño sexual, eliminando la ansiedad por el rendimiento y devolviendo al hombre su sentido de masculinidad.
+
+\textbf{- Consideraciones de Seguridad.}
+
+Al utilizar esta combinación, es fundamental monitorizar los niveles de estradiol, ya que tanto la testosterona como la DHEA pueden aromatizarse en estrógeno.
+. El objetivo es mantener el estradiol por debajo de 20-40 pg/ml para evitar efectos secundarios como ginecomastia o inflamación prostática, utilizando inhibidores de la aromatasa si fuera necesario.
+
+\subsection{Coadyuvantes Nutricionales y Fitoterapia}\label{coadyuvantes-nutricionales-y-fitoterapia}
+
+Para maximizar los resultados de la terapia hormonal y restaurar plenamente la vitalidad masculina, no basta con ajustar los niveles de hormonas bioidénticas. Es fundamental proporcionar al organismo las materias primas y el entorno circulatorio necesarios para que estas hormonas actúen con eficacia. Las fuentes identifican una serie de ``ayudas nutricionales'' que actúan sinérgicamente sobre la producción endógena y la salud vascular.
+
+• \href{https://metaph.es/es}{Zinc Mineral esencial}:
+Es un mineral crítico para el varón, ya que se ha demostrado que aumenta la producción natural de testosterona y mejora la función inmunológica. Además, actúa como un inhibidor natural de la aromatasa, ayudando a mantener el equilibrio frente al estrógeno. Las fuentes destacan que las ostras son su fuente natural más rica, funcionando como un afrodisíaco biológico al proporcionar los niveles necesarios para la salud prostática y la sensibilidad de los sentidos.
+
+• \textbf{\href{https://metaph.es/web/login?redirect=/es/shop/extracto-seco-ginkgo-biloba-tit-24-flavonglico-127452\%23attr\%3D215686}{🛒Ginkgo Biloba}}
+Este extracto vegetal es fundamental para la ejecución física del acto sexual, ya que mejora significativamente el flujo sanguíneo, actuando incluso a nivel de la microcirculación en los vasos más pequeños de las extremidades. Debido a que su efecto es acumulativo, suele requerir hasta dos meses de uso constante para que sus beneficios se manifiesten plenamente.
+
+• \href{https://metaph.es/es}{Ginseng Siberiano}:
+Clasificado como un adaptógeno, ayuda a las glándulas suprarrenales a gestionar el estrés. Al reducir la carga de estrés y la depresión asociada, funciona como un potente potenciador de la libido, devolviendo el entusiasmo y la energía necesaria para la actividad sexual.
+
+• \href{https://metaph.es/es}{Maca}:
+Esta planta peruana es ampliamente reconocida por sus propiedades para mejorar el deseo sexual y potenciar los efectos de la testosterona, siendo un coadyuvante ideal para varones que sienten que han perdido su ``chispa'' habitual.
+
+• \textbf{\href{https://metaph.es/web/login?redirect=/es/shop/arginina-l-usp-127935\#attr=217046}{🛒Arginina}}
+Este aminoácido cumple una doble función: estimula la secreción de la Hormona del Crecimiento (GH) y favorece la vasodilatación mediante la relajación de los vasos sanguíneos, lo cual es esencial para una erección firme.
+
+\subsection{El Impacto de Medicamentos y Estilo de Vida}\label{el-impacto-de-medicamentos-y-estilo-de-vida}
+
+El éxito de una terapia de reemplazo hormonal no depende únicamente de la calidad de los suplementos bioidénticos, sino también de la eliminación de factores externos que sabotean el equilibrio endocrino. Muchos fármacos de uso común y hábitos alimenticios actúan como bloqueadores químicos, anulando los beneficios del tratamiento y perpetuando síntomas como la fatiga y la disfunción eréctil.
+
+\textbf{- Interferencia de medicamentos preexistentes.}
+
+Un obstáculo clínico frecuente es el uso de fármacos que el paciente ya toma para otras condiciones crónicas, los cuales a menudo son la verdadera causa de sus problemas sexuales y metabólicos:
+
+\textbf{\emph{Medicamentos para la hipertensión (Beta-bloqueadores):}}
+
+Fármacos como el Atenolo o Lopressor son causas documentadas de impotencia. Además de afectar la función eréctil, estos medicamentos actúan como ``anti-tiroideos'' al bloquear la conversión de la hormona T4 en su forma activa T3, lo que garantiza prácticamente un aumento de peso en el paciente y complica la recuperación de la vitalidad. Casos clínicos muestran que, incluso con testosterona suplementaria, la disfunción eréctil puede no mejorar significativamente si estos fármacos siguen presentes en altas dosis.
+
+\textbf{\emph{Antidepresivos (ISRS):}}
+
+Sustancias como el Prozac tienen como efectos secundarios comunes la pérdida severa de la libido, la fatiga crónica y la debilidad. Estos fármacos suelen elevar los niveles de estrógeno en el hombre, lo que genera un ciclo vicioso de aumento de peso y depresión secundaria. En muchos casos, los pacientes son diagnosticados erróneamente con desórdenes psiquiátricos cuando el problema subyacente es un simple desequilibrio hormonal que el antidepresivo solo logra enmascarar o empeorar.
+
+\textbf{- Factores de estilo de vida:Los saboteadores metabólicos.}
+
+La nutrición y el consumo de sustancias recreativas juegan un papel crítico en la disponibilidad de las hormonas en el torrente sanguíneo:
+
+\textbf{\emph{El Azúcar:}} Es considerado uno de los mayores enemigos de la virilidad. El consumo excesivo de azúcar eleva el colesterol más rápido que las grasas y tiene el efecto directo de aumentar los niveles de estrógeno en el varón. Además, provoca picos de insulina que derivan en hipoglucemia reactiva, causando la ``niebla cerebral'' y el agotamiento profundo que muchos hombres experimentan entre las 3 y las 4 de la tarde.
+
+\textbf{\emph{El Alcohol:}} Su consumo reduce drásticamente la disponibilidad de testosterona libre y disminuye la capacidad de respuesta física ante el estímulo sexual. Bioquímicamente, el alcohol compite por el glutatión necesario en el hígado para la excreción de estrógenos; al estar el hígado ocupado procesando el alcohol, los niveles de estrógeno en sangre aumentan, saboteando el equilibrio androgénico.
+
+En conclusión, para que la terapia hormonal sea efectiva, es imperativo realizar una revisión profunda de la ``botica'' del paciente y su dieta. Sin retirar estos bloqueadores químicos y metabólicos, el organismo no podrá responder adecuadamente a los mensajeros del bienestar que son las hormonas bioidénticas.
+
+\subsection{Monitorización y Expectativas Clínicas}\label{monitorizaciuxf3n-y-expectativas-cluxednicas}
+
+El éxito de una terapia hormonal combinada no debe evaluarse únicamente a través de fríos datos estadísticos, sino mediante la mejoría real en la calidad de vida del paciente. En la práctica clínica, la premisa fundamental es ``tratar al paciente y no a los análisis de sangre'', reconociendo que el individuo es el mejor experto en su propio cuerpo.
+
+Para calibrar la eficacia del tratamiento, se deben considerar los siguientes hitos clínicos:
+
+\textbf{\emph{Erecciones Matutinas (El ``Termómetro'' Biológico):}}
+Son el indicador clínico por excelencia de que los niveles de testosterona son fisiológicamente adecuados para ese varón en particular. Muchos hombres pueden presentar niveles de laboratorio en el rango bajo pero mantener sus erecciones matutinas, lo que sugiere que no requieren un reemplazo agresivo. Por el contrario, despertar sin esta ``gloria matutina'' suele ser la primera señal de alerta del inicio de la andropausia.
+
+\textbf{\emph{Cronología de la Respuesta (El factor tiempo):}}
+Es vital gestionar las expectativas del paciente respecto a la velocidad de los resultados.
+
+\begin{itemize}
+\item
+  Corto plazo: La sensibilidad física y los niveles de energía pueden empezar a mejorar en cuestión de días o pocas semanas tras alcanzar el equilibrio.
+\item
+  Medio plazo (6 semanas): Este es el punto de inflexión donde suele retornar el deseo sexual y las fantasías, indicando que la testosterona y la progesterona están actuando eficazmente en los receptores cerebrales.
+\item
+  Largo plazo (4 meses): Los beneficios psicológicos profundos, como la capacidad para manejar el estrés y el optimismo vital aportado por la DHEA, suelen ser plenamente notables tras cuatro meses de terapia constante.
+\end{itemize}
+
+\textbf{\emph{Límites del Tratamiento y Enfoque Integral:}} Es importante que tanto el médico como el paciente mantengan expectativas realistas. Las hormonas son ``mensajeros del amor'' que facilitan la respuesta biológica, pero no pueden resolver crisis de pareja ni problemas psicológicos profundos que no tengan una raíz endocrina. En casos donde la libido mejora pero la relación sigue fracturada, la terapia de pareja se convierte en el coadyuvante necesario, ya que las hormonas no son una ``solución mágica'' para problemas de convivencia o comunicación.
+
+Finalmente, la reacción al tratamiento es el paso definitivo para confirmar el diagnóstico. Si la salud y el ánimo mejoran significativamente, el esquema hormonal es correcto; de lo contrario, se debe realizar un ``ajuste fino'' de las dosis basándose en los síntomas clínicos persistentes más que en los valores de referencia del laboratorio.
+
+\section{Hormonas Tiroideas}\label{Tiroides}
+
+\subsection{T3 y T4 en formulaciones personalizadas, microdosificación y estabilidad.}\label{t3-y-t4-en-formulaciones-personalizadas-microdosificaciuxf3n-y-estabilidad.}
+
+Es fundamental comprender que las hormonas tiroideas son los directores de orquesta del metabolismo celular. Sin una función tiroidea adecuada, ninguna célula del cuerpo puede producir energía de manera eficiente, lo que afecta desde la temperatura corporal hasta la claridad mental.
+
+Los puntos clave para introducir estas dos moléculas esenciales ( T4 y T3 ) son:
+
+\textbf{La Dualidad T4 y T3:} La glándula tiroides produce dos tipos principales de hormonas. La \textbf{T4 (tiroxina)} representa aproximadamente el 90\% de la secreción glandular, pero es esencialmente una hormona de almacenamiento o inactiva. Por otro lado, la \textbf{T3 (triyodotironina)} es la forma biológicamente activa y la responsable de casi todas las funciones metabólicas, siendo entre 3 y 5 veces más potente que la T4.
+
+\textbf{El Proceso de Conversión:} Para que el cuerpo pueda utilizar la tiroides, debe convertir la T4 en T3. Este proceso de ``activación'' ocurre principalmente fuera de la glándula tiroides: el hígado es responsable de aproximadamente el 60\% de esta conversión, seguido por los riñones y el intestino. Si estos órganos no funcionan bien o si faltan nutrientes como el \textbf{selenio}, la conversión falla y el paciente sufre síntomas de hipotiroidismo aunque su glándula produzca suficiente T4.
+
+\textbf{Impacto Sistémico:} Estas hormonas no tienen un solo órgano diana; actúan en prácticamente cada célula. Regulan el ritmo al que se queman las calorías, mantienen la temperatura corporal, controlan el colesterol, estimulan el crecimiento del cabello y son vitales para la memoria y la velocidad del pensamiento.
+
+\textbf{El Gran Error Clínico:} La medicina convencional suele centrarse únicamente en medir la T4 y la TSH (hormona estimulante de la tiroides). Sin embargo, las fuentes advierten que muchos pacientes tienen niveles de T4 ``normales'' en los análisis pero se sienten profundamente fatigados porque su cuerpo es incapaz de convertir esa T4 en la T3 activa. Es lo que se conoce a veces como ``hipotiroidismo celular'' o secundario.
+
+En resumen, no se puede tratar la tiroides simplemente ``rellenando'' el tanque con T4 sintética (como Synthroid o Levotiroxina); el éxito clínico depende de asegurar que la T3 activa llegue al núcleo de las células para encender el motor metabólico.
+
+\subsection{Formulaciones Personalizadas y T3 de Liberación Prolongada.}\label{formulaciones-personalizadas-y-t3-de-liberaciuxf3n-prolongada.}
+
+Debido a la dificultad de conseguir T3 comercializada y de que además la que se consigue por ejemplo en EEUU ( Cytomel) es de acción rápida y corta duración (aproximadamente tres horas), lo que puede provocar fluctuaciones bruscas de energía, se recomiendan el uso de fórmulas magistrales personalizadas:
+
+\textbf{T3 - Liberación prolongada:} Las farmacias formulistas pueden preparar T3 en cápsulas de liberación prolongada, lo que permite mantener niveles estables en sangre con una o dos tomas diarias.
+
+\textbf{Combinaciones T3/T4:} El enfoque más exitoso suele ser una combinación de ambas hormonas, permitiendo que el cuerpo disponga tanto de la forma activa inmediata como de una reserva para conversión.
+
+\textbf{Fórmula tipo:}
+
+\begin{verbatim}
+  T4.......38 mcg
+  T3.......9  mcg
+
+  Cápsulas liberacion prolongada nº 100
+\end{verbatim}
+
+\subsection{Microdosificación y Ajuste Progresivo (Fine-Tuning).}\label{microdosificaciuxf3n-y-ajuste-progresivo-fine-tuning.}
+
+Para el éxito clínico en el manejo de las hormonas tiroideas, especialmente cuando se introduce la T3 (triyodotironina), la regla de oro es el principio de ``comenzar con dosis bajas e ir despacio'' (start low, go slow).
+Debido a que la T3 es la forma biológicamente activa y de acción rápida, un exceso inicial puede provocar efectos secundarios incómodos, lo que hace que la microdosificación y el ajuste progresivo sean esenciales.
+
+\textbf{- Dosis inicial de T3:} Se recomienda iniciar con dosis muy pequeñas, como 7.5 mcg de T3 de liberación prolongada, una o dos veces al día.
+
+\textbf{- Dosis de T4:} A menudo se combina con dosis estándar de T4 (levotiroxina), como 0.125 mg, ajustándolas según la respuesta individual.
+
+El ajuste de la dosis no debe ser abrupto. El cuerpo requiere tiempo para adaptarse al nuevo nivel metabólico.
+
+\textbf{- Intervalos de ajuste:} Las dosis deben incrementarse gradualmente cada 10 a 14 días.
+Este periodo permite observar cómo reacciona el sistema cardiovascular y el sistema nervioso antes de añadir más hormona.
+
+Vigilancia de efectos secundarios: Durante este proceso se debe monitorizar la aparición de palpitaciones, nerviosismo, temblores o dolores de cabeza, señales de que la dosis podría estar aumentando demasiado rápido para la tolerancia del paciente.
+
+\textbf{Monitorización Basada en Síntomas vs.~Laboratorio.}
+
+Aunque los análisis de sangre son útiles, el ajuste fino depende de la clínica del paciente, ya que los rangos de ``normalidad'' del laboratorio son a menudo demasiado amplios y arbitrarios.
+
+\textbf{- Indicadores de mejoría:} Se considera que se está alcanzando la dosis óptima cuando desaparecen síntomas como la fatiga matutina, la piel seca, las uñas quebradizas y la intolerancia al frío.
+Temperatura corporal: Un barómetro físico clave es la temperatura basal; si el paciente sigue sintiéndose ``frío'' (especialmente por la noche), es un indicio de que aún requiere un ajuste al alza.
+Claridad mental: El cese de la ``niebla cerebral'' y la recuperación de la velocidad del pensamiento son signos de que la T3 está llegando eficazmente al cerebro.
+
+\subsection{Estabilidad y Calidad Farmacéutica.}\label{estabilidad-y-calidad-farmacuxe9utica.}
+
+La formulación de hormonas tiroideas presenta desafíos de estabilidad que requieren rigor técnico en la farmacia formulista:
+
+\textbf{- Estabilidad del Principio Activo (API):} Factores como el orden de mezcla y la inclusión de solubilizantes son críticos. Por ejemplo, en preparaciones tópicas, si el API cristaliza fuera de la solución, su biodisponibilidad y eficacia disminuyen drásticamente.
+
+\textbf{- El Reto de trabajar en microgramos:} Dado que las hormonas tiroideas son extremadamente potentes y se dosifican en microgramos (mcg), cualquier desviación mínima en la mezcla puede resultar en una sobredosis o en una dosis ineficaz.
+
+\textbf{- Precisión en la Mezcla:} Una mezcla no uniforme puede crear ``bolsas'' de cristales hormonales dentro de la cápsula o el vehículo, lo que provocaría una liberación errática de la hormona en el organismo.
+
+\textbf{- Variabilidad entre Farmacias Formulistas:} Estudios han demostrado que la potencia de las preparaciones hormonales magistrales puede variar significativamente entre distintos farmacias si no se siguen estándares rigurosos, con desviaciones registradas de hasta un 30\% respecto a la etiqueta.
+
+\textbf{- Influencias Externas y Estabilidad de la Conversión Metabólica:} La estabilidad del tratamiento no solo depende de la cápsula, sino del entorno bioquímico del paciente, que puede bloquear la conversión de la hormona de almacenamiento (T4) a la forma activa (T3).
+
+\begin{itemize}
+\item
+  Bloqueadores Farmacológicos:
+  Estatinas: Medicamentos para el colesterol (como Lipitor o Zocor) disminuyen los niveles de coenzima Q-10, un factor esencial para la conversión de hormonas tiroideas.
+\item
+  Beta-bloqueantes: Fármacos para la presión (como Atenolol o Lopressor) actúan como agentes ``anti-tiroideos'' al impedir directamente la conversión de T4 en T3 activa.
+\item
+  Soporte Nutricional Crítico: La falta de materias primas específicas desestabiliza el motor metabólico. Se requiere de Selenio, Zinc, Hierro y aminoácidos como la tirosina y cisteína para que las enzimas deiodinasas (interruptores) activen la hormona.
+\item
+  El Factor Yodo: El yodo es indispensable para la secreción tiroidea, pero debe manejarse con precaución; un exceso puede bloquear la glándula, por lo que debe suplementarse siempre en combinación con selenio para proteger el tejido.
+\end{itemize}
+
+\textbf{Resumen para el clínico.}
+
+Para un tratamiento tiroideo exitoso, el farmacéutico y el médico deben priorizar la forma activa T3, utilizar vehículos de liberación sostenida para evitar picos plasmáticos y asegurar la estabilidad de la fórmula protegiéndola de la humedad y temperaturas inadecuadas.
+
+\section{Eje adrenal y estrés crónico}\label{eje-adrenal-y-estruxe9s-cruxf3nico}
+
+El sistema endocrino cuenta con un mecanismo de vigilancia y supervivencia de alta precisión conocido como el eje \textbf{Hipotálamo-Pituitario-Adrenal (HPA).} Este eje es el responsable de coordinar la respuesta del organismo ante cualquier amenaza, ya sea física, emocional o bioquímica. Sin embargo, en el entorno moderno, el estrés ha dejado de ser una respuesta puntual para convertirse en un estado crónico, lo que deriva en un desequilibrio sistémico que afecta la vitalidad, el peso y la claridad mental.
+
+\textbf{1. La Fisiología de la Respuesta al Estrés:}
+Cuando el cerebro percibe un estresor, el hipotálamo envía una señal a la glándula pituitaria para que libere la hormona ACTH. Esta sustancia viaja por el torrente sanguíneo hasta las glándulas suprarrenales ---pequeños órganos situados sobre los riñones--- ordenando la producción de cortisol y adrenalina.
+
+El Cortisol como Hormona de Supervivencia: En una fase de alarma, el cortisol eleva los niveles de azúcar en sangre para proporcionar energía inmediata, aumenta la frecuencia cardíaca y suprime funciones no esenciales para la lucha o la huida, como la digestión y la reproducción.
+
+El Rol de la ACTH: Es el regulador de la vigilancia y la resistencia al estrés; su deficiencia se manifiesta clínicamente a través de una tez pálida, dificultad para concentrarse y una baja tolerancia a las presiones externas.
+
+\textbf{2. De la Resistencia al Agotamiento Adrenal.}
+
+La sintomatología del eje adrenal varía drásticamente dependiendo de si el paciente se encuentra en una fase de resistencia (exceso) o de agotamiento (deficiencia). El cortisol no es solo una ``hormona del estrés'', sino un regulador crítico del metabolismo, la presión arterial y la respuesta inflamatoria.
+
+\textbf{- Fase de Exceso: Cortisol Elevado}
+
+En esta etapa, el cuerpo está en una alerta constante, a menudo descrita como el estado de ``cableado pero cansado'' (wired but tired). Los signos clave incluyen:
+
+\begin{itemize}
+\item
+  Alteraciones del Sueño y Ánimo: Insomnia persistente, dificultad para calmarse antes de dormir, ansiedad, irritabilidad y sentimientos de estar sobrecargado.
+\item
+  Signos Físicos: Aparición de la ``cara de luna llena'' (rostro redondeado y edematoso) y, en casos marcados, la ``joroba de búfalo'' (acumulación de grasa en la zona cervical posterior).
+\item
+  Disfunción Metabólica: Acumulación predominante de grasa abdominal profunda, hipertensión arterial, antojos intensos de azúcar y niveles elevados de glucosa en sangre.
+\item
+  Degradación de Tejidos: Debilitamiento óseo (osteoporosis), pérdida de masa muscular y piel delgada que cicatriza lentamente.
+\end{itemize}
+
+\textbf{- Fase de Agotamiento: Cortisol Deficiente}
+
+Cuando las glándulas suprarrenales ya no pueden mantener la demanda de estrés, los niveles caen por debajo de lo fisiológico, provocando un colapso de la vitalidad.
+
+\begin{itemize}
+\item
+  Fatiga Profunda: Un agotamiento crónico que no mejora con el descanso, a menudo más severo por la tarde-noche.
+\item
+  Inestabilidad Glucémica: El cortisol es vital para mantener el azúcar en sangre; su falta provoca hipoglucemia reactiva, manifestada como temblores, mareos y confusión mental si se salta una comida.
+\item
+  Hipotensión y Mareos: Baja presión arterial y hipotensión postural (mareo al ponerse de pie rápidamente).
+\item
+  Inflamación y Sensibilidad: Al perderse el principal antiinflamatorio del cuerpo, aumentan las alergias, el asma, los dolores articulares y la sensibilidad excesiva a productos químicos o ruidos fuertes.
+\item
+  Estado Mental: Sensación de desamparo, ``niebla cerebral'', dificultad para concentrarse y pérdida de la capacidad de respuesta ante cualquier mínimo estresor.
+\end{itemize}
+
+\textbf{Nota clínica:} El diagnóstico no debe basarse solo en un valor aislado de laboratorio, sino en la evolución de estos síntomas a lo largo del día, ya que el cortisol debe seguir un ritmo circadiano natural (alto por la mañana y bajo por la noche) para ser funcional.
+
+\subsection{Hidrocortisona: El Reemplazo del Cortisol.}\label{hidrocortisona-el-reemplazo-del-cortisol.}
+
+La hidrocortisona es el nombre farmacéutico del cortisol natural, la principal hormona de supervivencia producida por la corteza de las glándulas suprarrenales. En el contexto de la terapia hormonal, su uso no busca la supresión inmunológica (como ocurre con las dosis farmacológicas de corticoides sintéticos), sino la restauración de los niveles fisiológicos para devolver al organismo su capacidad de respuesta ante el estrés.
+
+\textbf{Diferencia entre Hidrocortisona Natural y Derivados Sintéticos.}
+
+Es fundamental distinguir entre la hidrocortisona bioidéntica y sus análogos sintéticos como la prednisona, la metilprednisolona o la dexametasona.
+
+\begin{itemize}
+\item
+  Afinidad Psicológica: La hidrocortisona natural es significativamente más activa a nivel psicológico; mientras que los sintéticos pueden inducir estados de psicosis o confusión en pacientes sensibles, el reemplazo con cortisol natural tiende a estabilizar el ánimo y eliminar la depresión ligada al agotamiento.
+\item
+  Seguridad Ósea: En dosis fisiológicas (alrededor de 20 mg diarios), la hidrocortisona no provoca pérdida de masa ósea, a diferencia de los sintéticos que, incluso en dosis bajas, pueden iniciar procesos de osteoporosis si no se vigilan estrechamente.
+\end{itemize}
+
+\textbf{Uso Terapéutico en el Agotamiento Adrenal.}
+Cuando un paciente presenta un cuadro de fatiga crónica profunda y niveles de cortisol por debajo de los rangos óptimos, la administración de hidrocortisona actúa como un ``periodo de descanso'' para las glándulas suprarrenales. Al suministrar una pequeña cantidad de hormona externa, las glándulas dejan de estar bajo la presión constante de la ACTH (hormona pituitaria), lo que les permite regenerar sus propias reservas celulares y retomar la producción endógena meses después.
+
+\textbf{Dosificación y Cronobiología.}
+
+La hidrocortisona debe administrarse imitando el ritmo natural del cuerpo para evitar efectos secundarios y optimizar la energía:
+
+Dosis Fraccionadas: Debido a que el cuerpo utiliza el cortisol con gran rapidez, la dosis total diaria (frecuentemente entre \textbf{15 y 25 mg}) debe dividirse en dos a cuatro tomas.
+
+Sincronización Circadiana: La dosis más alta debe tomarse inmediatamente al despertar para facilitar el ``encendido'' metabólico, con dosis menores al mediodía y a media tarde.
+
+Restricción Nocturna: \textbf{No debe administrarse antes de acostarse}, ya que el cortisol es una hormona de alerta y su presencia nocturna interferiría con el sueño profundo y la secreción de melatonina.
+
+\textbf{La Sinergia Obligatoria: Cortisol y DHEA.}
+
+El cortisol es, por naturaleza, una hormona catabólica, lo que significa que ``consume'' o descompone tejidos para liberar energía rápida. Para evitar el desgaste de la masa muscular, la piel y el hueso, la hidrocortisona debe equilibrarse siempre con hormonas anabólicas.
+
+\begin{itemize}
+\item
+  Balance Metabólico: La DHEA es el contrapeso ideal, ya que construye y repara los tejidos que el cortisol desgasta.
+\item
+  Protección Tisular: Esta combinación permite que el paciente recupere su resistencia al estrés y su presión arterial sin sufrir los efectos de ``cara de luna llena'' o pérdida de colágeno típicos del exceso de glucocorticoides.
+\end{itemize}
+
+\textbf{Seguridad y Signos de Sobredosificación.}
+
+El monitoreo clínico es superior a las pruebas de papel para ajustar la dosis de hidrocortisona. El médico y el paciente deben estar alerta ante signos de exceso, tales como:
+- Excitación constante o euforia injustificada.
+- Retención de líquidos o hinchazón facial (cara redondeada).
+- Aparición de una acumulación de grasa en la parte superior de la espalda (``joroba de búfalo'').
+
+En ausencia de estos signos y ante la desaparición de la fatiga, los mareos posturales y los antojos de sal, se considera que el paciente ha alcanzado su punto dulce fisiológico.
+
+\subsection{DHEA: El Marcador de Resiliencia y Longevidad.}\label{dhea-el-marcador-de-resiliencia-y-longevidad.}
+
+La DHEA (dehidroepiandrosterona) es considerada la hormona esteroide más abundante en el cuerpo humano durante la juventud y es producida mayoritariamente por las glándulas suprarrenales, aunque también se sintetiza en los testículos, ovarios, cerebro y piel. A menudo se le denomina como la ``hormona madre'' o la ``hormona de la alegría de vivir'', debido a su papel crucial como precursora de otras hormonas sexuales y su impacto directo en el bienestar físico y emocional.
+
+\textbf{Funciones, impacto de su deficiencia y su manejo clínico:}
+
+\textbf{- Fisiología y el Marcador Biológico de la Edad}
+
+La DHEA es única porque sus niveles siguen una trayectoria lineal muy clara con el envejecimiento:
+Pico de juventud: Comienza a aparecer a los 6 años y alcanza su nivel máximo entre los 20 y 25 años.
+
+Declive progresivo: A los 40 años, los niveles suelen estar al 50\%; para los 60-80 años, han caído a un 10-20\% de su valor pico.
+
+Indicador de longevidad: Debido a este declive constante, se considera el mejor marcador biológico de la edad; los individuos con niveles más altos de DHEA tienden a presentar una mayor longevidad y un envejecimiento más saludable.
+
+\textbf{- Funciones Clave en el Organismo.}
+
+La DHEA actúa tanto por sí misma como a través de sus metabolitos activos (andrógenos y estrógenos), aportando múltiples beneficios:
+
+Metabolismo y Composición Corporal: Es conocida como una hormona que quema grasa. Ayuda a reducir la grasa abdominal y mejora la sensibilidad a la insulina, mientras fortalece el tejido muscular y el tono físico.
+
+Bienestar Psicológico: Lucha contra la ansiedad y la depresión, mejorando el estado de ánimo, la energía y la capacidad para manejar el estrés diario.
+
+Función Cognitiva: Optimiza la memoria y la agudeza mental. Se encuentra en concentraciones muy altas en el cerebro, donde actúa como un neuroesteroide.
+
+Salud Sexual: Mejora significativamente la libido, especialmente en mujeres, y potencia la función eréctil en hombres con disfunción.
+
+Sistema Inmunológico: Estimula la producción de anticuerpos e interleucina-2, reforzando las defensas contra infecciones virales, bacterianas y parasitarias.
+
+Protección Ósea y Cardiovascular: Ayuda a prevenir la osteoporosis al estimular el crecimiento óseo. Protege el corazón al evitar la oxidación del colesterol LDL y mejorar la flexibilidad arterial.
+
+\textbf{- DHEA y Estrés Crónico.}
+
+Existe una relación inversa entre el estrés y los niveles de DHEA. En situaciones de tensión prolongada, las glándulas suprarrenales se agotan, priorizando la producción de cortisol y sacrificando la de DHEA.
+El amortiguador del cortisol: La DHEA controla los efectos catabólicos (destructivos) del exceso de cortisol en los tejidos.
+
+\textbf{- Manifestaciones Clínicas de la Deficiencia.}
+
+La falta de DHEA puede manifestarse a través de signos físicos y emocionales sutiles pero impactantes:
+
+\begin{itemize}
+\item
+  Apariencia: Piel y ojos secos, cabello sin vida, pérdida de vello en axilas y zona púbica, y cara con aspecto cansado o tenso.
+\item
+  Estado físico: Debilidad muscular, fatiga crónica, baja resistencia al ruido y dificultad para subir escaleras (especialmente en mayores de 65 años).
+\item
+  Estado emocional: Falta de entusiasmo, inseguridad, tristeza y apatía.
+\end{itemize}
+
+\textbf{- Monitorización y Suplementación.}
+
+El reemplazo de DHEA debe ser personalizado y monitorizado cuidadosamente para evitar desequilibrios:
+
+Pruebas de Laboratorio: El examen adecuado es el de \textbf{DHEA-S (sulfato de DHEA)}, ya que es más estable que la DHEA simple.
+
+Objetivo terapéutico: Se busca restaurar los niveles a los rangos de una persona sana de 40 años (aprox. 250 mcg/dl en mujeres y 400-500 mcg/dl en hombres).
+
+\textbf{Dosificación común:}
+
+Mujeres: \textbf{5 a 25 mg} diarios.
+
+Hombres: \textbf{25 a 50 mg} diarios (preferiblemente por la noche).
+
+Seguridad: El \textbf{efecto secundario} más común por exceso es el \textbf{acné o piel grasa.} En hombres, es vital monitorizar los niveles de \textbf{estradiol}, que no deberían superar los 20-40 pg/ml durante el tratamiento.
+
+\subsection{Estrategias de Recuperación y Equilibrio.}\label{estrategias-de-recuperaciuxf3n-y-equilibrio.}
+
+La restauración del eje adrenal requiere un enfoque multinivel que combine el soporte nutricional, el estilo de vida y, en casos necesarios, la reposición hormonal:
+
+\begin{itemize}
+\item
+  Soporte Nutricional: Las glándulas suprarrenales requieren de materias primas específicas para su reparación. Se recomienda el uso de \textbf{Vitamina C} (1 g tres veces al día) y \textbf{Niacina} (Vitamina B3) para apoyar la producción de energía celular.
+\item
+  Fitoterapia y Adaptógenos: El uso de plantas adaptógenas es fundamental para normalizar la liberación de cortisol y mejorar la resistencia global del sistema.
+\item
+  Terapia Hormonal Sustitutoria: En situaciones de agotamiento profundo, se puede considerar el uso de hidrocortisona natural en dosis fisiológicas muy bajas para permitir que las glándulas descansen y se regeneren.
+\end{itemize}
+
+En conclusión, el tratamiento del estrés crónico no debe limitarse a la gestión psicológica; es una intervención biológica que busca proteger la integridad de las glándulas suprarrenales para devolver al paciente su capacidad de respuesta y resiliencia ante la vida.
+
+\section{Metabolismo y composición corporal.}\label{metabolismo-y-composiciuxf3n-corporal.}
+
+Influencia hormonal en el metabolismo, peso y resistencia a la insulina.
+
+\section{Tricologia Hormonal}\label{tricologia-hormonal}
+
+Formulas Magistrales y papel hormonal en la caida capilar.
+
+\section{Medicina Integrativa.}\label{medicina-integrativa.}
+
+Fitoterapia y Nutracéuticos de apoyo a la terapia hormonal.
+
+\section{Formas Farmacéuticas e innovación.}\label{formas-farmacuxe9uticas-e-innovaciuxf3n.}
+
+Nuevos vehículos y nuevas bases transdérmicas, tecnologías emergentes y visión futura.
+
+\section{Revision anual y actualización científica.}\label{revision-anual-y-actualizaciuxf3n-cientuxedfica.}
+
+Revisión de tendencias y nuevas evidencias científicas en formulación hormonal.
+
+\section*{Alopecia}\label{alopecia}
+
+
+Sección que recopila soluciones tópicas y cápsulas orales basadas en la tecnología de vehículos específicos.
+
+\subsection{Alopecia Androgénica (AGA) - Tópica}\label{alopecia-androguxe9nica-aga---tuxf3pica}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Componente / Principio Activo & Concentración / Cantidad \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Minoxidil & 5\% \\
+Finasteride & 0.25\% \\
+TrichoSol™ & c.s.p 100 mL \\
+\end{longtable}
+}
+
+\textbf{Posología:} Aplicar 1 o 2 veces/día sobre cabello seco.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Componente / Principio Activo & Concentración / Cantidad \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Minoxidil & 5\% \\
+Latanoprost & 0.005\% \\
+TrichoFoam™ & c.s.p 150 mL \\
+\end{longtable}
+}
+
+\textbf{Posología:} Aplicar 1 o 2 veces/día sobre cabello seco.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Componente / Principio Activo & Concentración / Cantidad \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Minoxidil & 5\% \\
+I-Grantine & 0.5\% \\
+TrichoSol™ & c.s.p 100 mL \\
+\end{longtable}
+}
+
+\textbf{Posología:} Aplicar 1 o 2 veces/día sobre cabello seco.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Componente / Principio Activo & Concentración / Cantidad \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+17 \(\alpha\) Estradiol & 0.025\% \\
+Minoxidil & 5\% \\
+TrichoSol™ & c.s.p 100 mL \\
+\end{longtable}
+}
+
+\textbf{Posología:} Aplicar 1 o 2 veces/día sobre cabello seco.
+
+\subsection{AGA con Menopausia}\label{aga-con-menopausia}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Componente / Principio Activo & Concentración / Cantidad \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Minoxidil & 5\% \\
+Cafeisome & 5\% \\
+Latanoprost & 0.005\% \\
+TrichoSol™ & c.s.p 120 mL \\
+\end{longtable}
+}
+
+\textbf{Posología:} Aplicar 1 o 2 veces/día sobre cabello seco.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Componente / Principio Activo & Concentración / Cantidad \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Minoxidil & 5\% \\
+17 \(\alpha\) Estradiol & 0.025\% \\
+TrichoSol™ & c.s.p 120 mL \\
+\end{longtable}
+}
+
+\textbf{Posología:} Aplicar 1 o 2 veces/día sobre cabello seco.
+
+\subsection{Higiene y Cuidado Capilar (AGA)}\label{higiene-y-cuidado-capilar-aga}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Componente / Principio Activo & Concentración / Cantidad \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Prostaquinona & 3\% \\
+TrichoOil™ & c.s.p 60 mL \\
+\end{longtable}
+}
+
+\textbf{Modo de empleo:} Aplicar 1 a 2 veces/semana durante 10 minutos.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Componente / Principio Activo & Concentración / Cantidad \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Cafeisome & 3\% \\
+D-Pantenol & 5\% \\
+TrichoWash™ & c.s.p 250 mL \\
+\end{longtable}
+}
+
+\textbf{Modo de empleo:} Lavar el cabello y dejar actuar por 2 minutos y enjuagar.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Componente / Principio Activo & Concentración / Cantidad \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Piridoxina (Vit B6) & 0.5\% \\
+TrichoWash™ & c.s.p 250 mL \\
+\end{longtable}
+}
+
+\textbf{Modo de empleo:} Lavar el cabello y dejar actuar por 2 minutos y enjuagar.
+
+\subsection{Alopecia Areata (AA) - Cuero Cabelludo}\label{alopecia-areata-aa---cuero-cabelludo}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Componente / Principio Activo & Concentración / Cantidad \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Minoxidil & 5\% \\
+Clobetasol & 0.05\% \\
+TrichoFoam™ & c.s.p 150 mL \\
+\end{longtable}
+}
+
+\textbf{Posología:} 1 vez/día.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Componente / Principio Activo & Concentración / Cantidad \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Tacrolimus & 0.01\% \\
+TrichoOil™ & c.s.p 30 mL \\
+\end{longtable}
+}
+
+\textbf{Modo de empleo:} Aplicar 1 a 2 veces/semana, posteriormente lavar con TrichoWash.
+
+\subsection{Áreas Específicas (Cejas, Pestañas, Barba)}\label{uxe1reas-especuxedficas-cejas-pestauxf1as-barba}
+
+\subsubsection{Cejas y Pestañas}\label{cejas-y-pestauxf1as}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Componente / Principio Activo & Concentración / Cantidad \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Latanoprost & 0.005\% \\
+TrichoCream™ & c.s.p 4 g \\
+\end{longtable}
+}
+
+\textbf{Posología:} 1 vez al día en las cejas y pestañas.
+
+\subsubsection{Barba}\label{barba}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Componente / Principio Activo & Concentración / Cantidad \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Minoxidil & 5\% \\
+Latanoprost & 0.005\% \\
+TrichoFoam™ & c.s.p 50 mL \\
+\end{longtable}
+}
+
+\textbf{Posología:} 1-2 veces/día, una capa fina.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Componente / Principio Activo & Concentración / Cantidad \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Minoxidil & 5\% \\
+I-Grantine & 0.5\% \\
+TrichoCream™ & c.s.p 30 g \\
+\end{longtable}
+}
+
+\textbf{Posología:} 1-2 veces/día, una capa fina.
+
+\subsection{Alopecia Descamativa (Dermatitis Seborreica)}\label{alopecia-descamativa-dermatitis-seborreica}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Componente / Principio Activo & Concentración / Cantidad \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Ketoconazol & 2\% \\
+TrichoWash™ & c.s.p 250 mL \\
+\end{longtable}
+}
+
+\textbf{Modo de empleo:} Lavar el cabello y dejar actuar por 2 minutos y enjuagar.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Componente / Principio Activo & Concentración / Cantidad \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Prostaquinona & 3\% \\
+TrichoOil™ & c.s.p 60 mL \\
+\end{longtable}
+}
+
+\textbf{Modo de empleo:} Aplicar 1 a 2 veces/semana durante 10 minutos.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Componente / Principio Activo & Concentración / Cantidad \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Latanoprost & 0.005\% \\
+TrichoSol™ & c.s.p 120 mL \\
+\end{longtable}
+}
+
+\textbf{Modo de empleo:} Aplicar 1 vez al día en la zona afectada.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Componente / Principio Activo & Concentración / Cantidad \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Ciclopiroxolamina & 1.5\% \\
+TrichoWash™ & c.s.p 250 mL \\
+\end{longtable}
+}
+
+\textbf{Modo de empleo:} Lavar el cabello y dejar actuar por 2 minutos y enjuagar.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Componente / Principio Activo & Concentración / Cantidad \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Sulfuro de Selenio & 4\% \\
+Zinc Piritionato & 2\% \\
+TrichoWash™ & c.s.p 250 mL \\
+\end{longtable}
+}
+
+\textbf{Modo de empleo:} Aplicar 1 a 2 veces/semana durante 10 minutos.
+
+\subsection{Alopecia Frontal Fibrosante}\label{alopecia-frontal-fibrosante}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Componente / Principio Activo & Concentración / Cantidad \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Prostaquinona & 3\% \\
+TrichoOil™ & c.s.p 60 mL \\
+\end{longtable}
+}
+
+\textbf{Modo de empleo:} Aplicar 1 a 2 veces/semana durante 10 minutos.
+
+\subsection{Efluvio Telógeno}\label{efluvio-teluxf3geno}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Componente / Principio Activo & Concentración / Cantidad \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+I-Grantine & 0.5\% \\
+TrichoCream™ & c.s.p 120 g \\
+\end{longtable}
+}
+
+\textbf{Posología:} 1-2 veces/día, una capa fina.
+
+\subsection{Alopecia - Cápsulas Orales}\label{alopecia---cuxe1psulas-orales}
+
+\subsubsection{Cápsulas Generales (AGA)}\label{cuxe1psulas-generales-aga}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Componente / Principio Activo & Concentración / Cantidad \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Biotina & 5 mg \\
+L-Cistina & 25 mg \\
+Coenzima Q10 & 30 mg \\
+Niacina & 20 mg \\
+SiliciuMax® & 150 mg \\
+\end{longtable}
+}
+
+\textbf{Posología:} Administrar 2 cápsulas/día.
+
+\subsubsection{Cápsulas Femeninas (AGA)}\label{cuxe1psulas-femeninas-aga}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Componente / Principio Activo & Concentración / Cantidad \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Minoxidil & 0.5 mg \\
+Biotina & 10 mg \\
+L-Cistina & 10 mg \\
+SiliciuMax® & 200 mg \\
+\end{longtable}
+}
+
+\textbf{Posología:} Administrar 1 cápsula cada 24 horas.
+
+\subsubsection{Cápsulas Masculinas (AGA)}\label{cuxe1psulas-masculinas-aga}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Componente / Principio Activo & Concentración / Cantidad \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Minoxidil & 5 mg \\
+Biotina & 10 mg \\
+L-Cistina & 10 mg \\
+SiliciuMax® & 200 mg \\
+\end{longtable}
+}
+
+\textbf{Posología:} Administrar 1 cápsula cada 24 horas.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Componente / Principio Activo & Concentración / Cantidad \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Dutasteride & 0.5 mg \\
+\end{longtable}
+}
+
+\textbf{Posología:} Administrar 1 cápsula 3 veces por semana.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Componente / Principio Activo & Concentración / Cantidad \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Naltrexona & 3 mg \\
+L-Cistina & 10 mg \\
+SiliciuMax® & 150 mg \\
+\end{longtable}
+}
+
+\textbf{Posología:} Administrar 1 cápsula cada 24 horas.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Componente / Principio Activo & Concentración / Cantidad \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Minoxidil & 2.5 mg \\
+L-Cistina & 10 mg \\
+SiliciuMax® & 200 mg \\
+\end{longtable}
+}
+
+\textbf{Posología:} Administrar 1 cápsula cada 12 horas.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section*{Psoriasis}\label{psoriasis}
+
+
+Fórmulas orientadas al tratamiento de la psoriasis según su localización clínica.
+
+\subsection{Psoriasis: Cuero Cabelludo}\label{psoriasis-cuero-cabelludo}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Componente / Principio Activo & Concentración / Cantidad \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Ciclopiroxolamina & 1.5\% \\
+Zinc Piritionato & 2\% \\
+Coaltar & 6\% \\
+Ácido glicólico & 10\% \\
+TrichoWash™ & c.s.p 250 mL \\
+\end{longtable}
+}
+
+\textbf{Posología:} Masajear durante 2 minutos y enjuagar.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Componente / Principio Activo & Concentración / Cantidad \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Climbazole & 2\% \\
+TrichoWash™ & c.s.p 250 mL \\
+\end{longtable}
+}
+
+\textbf{Posología:} Masajear durante 2 minutos y enjuagar.
+
+\subsection{Psoriasis Corporal}\label{psoriasis-corporal}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Componente / Principio Activo & Concentración / Cantidad \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Coaltar & 10\% \\
+Ácido salicílico & 3\% \\
+Clotrimazol & 1\% \\
+Fitalite™ & c.s.p 100 g \\
+\end{longtable}
+}
+
+\textbf{Posología:} Aplicar 1 vez al día, por la noche.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Componente / Principio Activo & Concentración / Cantidad \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Mentol & 0.5\% \\
+Resorcina & 5\% \\
+Alantoína & 0.2\% \\
+Aceite de rosa mosqueta & 2\% \\
+Versatil™ & c.s.p 100 g \\
+\end{longtable}
+}
+
+\textbf{Posología:} Aplicar 1 vez al día, por la noche.
+
+\subsection{Psoriasis Palmo-Plantar}\label{psoriasis-palmo-plantar}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Componente / Principio Activo & Concentración / Cantidad \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Urea & 10\% \\
+Ácido salicílico & 4\% \\
+Clobetasol propionato & 0.1\% \\
+Amonio lactato & 12\% \\
+Versatil™ & c.s.p 100 g \\
+\end{longtable}
+}
+
+\textbf{Posología:} Aplicar 2 veces al día.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Componente / Principio Activo & Concentración / Cantidad \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Tacrolimus & 0.5\% \\
+Ácido salicílico & 3-10\% \\
+Versatil™ & c.s.p 100 g \\
+\end{longtable}
+}
+
+\textbf{Posología:} Aplicar 1 vez al día.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Componente / Principio Activo & Concentración / Cantidad \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Triamcinolona & 0.1\% \\
+Glicerina & 10\% \\
+Aceite de rosa mosqueta & 5\% \\
+Alantoína & 0.5\% \\
+Gentamicina & 0.1\% \\
+Vitamina B12 & 0.06\% \\
+Versatil™ & c.s.p 100 g \\
+\end{longtable}
+}
+
+\textbf{Posología:} Aplicar 1 vez al día.
+
+\subsection{Psoriasis Uñas}\label{psoriasis-uuxf1as}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Componente / Principio Activo & Concentración / Cantidad \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Ácido salicílico & 2\% \\
+Clobetasol propionato & 8\% \\
+Laca & c.s.p 10 mL \\
+\end{longtable}
+}
+
+\textbf{Posología:} Aplicar 1 vez al día.
+
+\subsection{Psoriasis en Placa}\label{psoriasis-en-placa}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Componente / Principio Activo & Concentración / Cantidad \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Clobetasol propionato & 0.05\% \\
+Urea & 10\% \\
+Ácido salicílico & 3\% \\
+Alantoína & 1\% \\
+Versatil™ & c.s.p 100 g \\
+\end{longtable}
+}
+
+\textbf{Posología:} Aplicar 1 vez al día.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section*{Pigmentación y Discromías}\label{pigmentaciuxf3n-y-discromuxedas}
+
+
+Tratamientos especializados para hiperpigmentaciones, melasma y vitíligo.
+
+\subsection{Hiperpigmentación / Hiperpigmentación Post-Inflamatoria}\label{hiperpigmentaciuxf3n-hiperpigmentaciuxf3n-post-inflamatoria}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Componente / Principio Activo & Concentración / Cantidad \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Hidroquinona & 6\% \\
+Arbutina & 3\% \\
+Tretinoína & 0.025\% \\
+Nourivan Antiox™ & c.s.p 50 g \\
+\end{longtable}
+}
+
+\textbf{Posología:} Aplicar 2 veces al día.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Componente / Principio Activo & Concentración / Cantidad \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Ácido kójico & 2\% \\
+Alfa-bisabolol & 6\% \\
+Ácido Glicólico & 5\% \\
+Ácido Azelaico & 6\% \\
+Nourivan Antiox™ & c.s.p 50 g \\
+\end{longtable}
+}
+
+\textbf{Posología:} Aplicar 2 veces al día.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Componente / Principio Activo & Concentración / Cantidad \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Ácido mandélico & 10\% \\
+Ácido Tranexámico & 3\% \\
+Ácido kójico & 5\% \\
+Ácido fítico & 4\% \\
+Ácido azelaico & 6\% \\
+Arbutina & 4\% \\
+Nourivan Antiox™ & c.s.p 50 g \\
+\end{longtable}
+}
+
+\textbf{Posología:} Aplicar 2 veces al día.
+
+\subsection{Melasma (Cápsulas Orales)}\label{melasma-cuxe1psulas-orales}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Componente / Principio Activo & Concentración / Cantidad \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Ácido Tranexámico & 250 mg \\
+\end{longtable}
+}
+
+\textbf{Posología:} Administrar 2 cápsulas cada 24 horas.
+
+\subsection{Lentigo Actínico y Melasma Reacio}\label{lentigo-actuxednico-y-melasma-reacio}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Componente / Principio Activo & Concentración / Cantidad \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Arbutina & 3\% \\
+Ácido lactobiónico (PHA) & 5\% \\
+Drone X50 pure White & 1\% \\
+Genowhite & 2\% \\
+Fitalite™ & c.s.p 50 g \\
+\end{longtable}
+}
+
+\textbf{Posología:} Aplicar 1 vez al día en el área afectada.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Componente / Principio Activo & Concentración / Cantidad \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Ácido retinoico & 0.03\% \\
+Clobetasol & 0.025\% \\
+Ácido kójico & 3\% \\
+Vitamina E & 1\% \\
+Arbutina & 1\% \\
+DermaSpheres C & 5\% \\
+Nourivan Antiox™ & c.s.p 30 g \\
+\end{longtable}
+}
+
+\textbf{Posología:} Aplicar 20 noches, luego noches alternas durante 20 días y después 2 noches por semana.
+
+\subsection{Hipopigmentación (Vitíligo, Cicatrices)}\label{hipopigmentaciuxf3n-vituxedligo-cicatrices}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Componente / Principio Activo & Concentración / Cantidad \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Pigmerise™ & 20\% \\
+Fitalite™ & c.s.p 50 g \\
+\end{longtable}
+}
+
+\textbf{Posología:} Aplicar 1 vez al día.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Componente / Principio Activo & Concentración / Cantidad \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Pigmerise™ & 20\% \\
+Vitamina D3 & 5000 UI \\
+Vitamina C & 120 mg \\
+SiliciuMax® & 100 mg \\
+Fitalite® & c.s.p 50 g \\
+\end{longtable}
+}
+
+\textbf{Posología:} Aplicar en capa fina en la zona afectada.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section*{Acné}\label{acnuxe9}
+
+
+Fórmulas para abordaje integral tópico y oral del acné clínico.
+
+\subsection{Acné: Tratamiento Tópico (Limpieza / Syndet)}\label{acnuxe9-tratamiento-tuxf3pico-limpieza-syndet}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Componente / Principio Activo & Concentración / Cantidad \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Clindamicina & 2\% \\
+Ácido lactobiónico & 5\% \\
+Syndet & c.s.p 150 mL \\
+\end{longtable}
+}
+
+\textbf{Posología:} Aplicar 2 veces al día.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Componente / Principio Activo & Concentración / Cantidad \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Peróxido de benzoilo & 2\% \\
+Tea Tree Oil & 0.5\% \\
+Aceite esencial de Lavanda & 0.5\% \\
+Syndet & c.s.p 150 mL \\
+\end{longtable}
+}
+
+\textbf{Posología:} Aplicar 2 veces al día.
+
+\subsection{Acné: Cremas y Geles Tópicos}\label{acnuxe9-cremas-y-geles-tuxf3picos}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Componente / Principio Activo & Concentración / Cantidad \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Peróxido de benzoilo & 3\% \\
+Clindamicina & 2\% \\
+Fitalite™ & c.s.p 30 g \\
+\end{longtable}
+}
+
+\textbf{Posología:} Aplicar 1 vez al día.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Componente / Principio Activo & Concentración / Cantidad \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Clindamicina & 2\% \\
+Tea Tree Oil & 0.1\% \\
+Aceite esencial de Lavanda & 0.3\% \\
+Physalis Angulata Extract & 1\% \\
+Fitalite™ & c.s.p 30 g \\
+\end{longtable}
+}
+
+\textbf{Posología:} Aplicar 1 vez al día.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Componente / Principio Activo & Concentración / Cantidad \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Clindamicina & 2\% \\
+Tretinoína & 0.03\% \\
+Ácido salicílico & 2\% \\
+Fitalite™ & c.s.p 30 g \\
+\end{longtable}
+}
+
+\textbf{Posología:} Aplicar 1 vez al día.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Componente / Principio Activo & Concentración / Cantidad \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Sulfadiazina sódica & 10\% \\
+Azufre & 5\% \\
+Fitalite™ & c.s.p 30 g \\
+\end{longtable}
+}
+
+\textbf{Posología:} Aplicar 1 vez al día.
+
+\subsection{Acné: Tratamiento Oral}\label{acnuxe9-tratamiento-oral}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Componente / Principio Activo & Concentración / Cantidad \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Tretinoína & 125 mg \\
+Nistatina & 25000 UI \\
+Vitamina C & 125 mg \\
+\end{longtable}
+}
+
+\textbf{Posología:} Tomar 2 cápsulas, 2 veces al día.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section*{Dermatitis Atópica y Cenicienta}\label{dermatitis-atuxf3pica-y-cenicienta}
+
+
+\subsection{Dermatitis Atópica Tópica}\label{dermatitis-atuxf3pica-tuxf3pica}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Componente / Principio Activo & Concentración / Cantidad \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Betametasona & 0.1\% \\
+Versatile™ & c.s.p 30 g \\
+\end{longtable}
+}
+
+\textbf{Posología:} Aplicar 1 vez al día.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Componente / Principio Activo & Concentración / Cantidad \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Tacrolimus & 0.03\% \\
+Betametasona & 0.025\% \\
+Versatile™ & c.s.p 30 g \\
+\end{longtable}
+}
+
+\textbf{Posología:} Aplicar 1 vez al día.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Componente / Principio Activo & Concentración / Cantidad \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Urea & 10\% \\
+Aceite de almendras dulces & 5\% \\
+Aceite esencial de Lavanda & 0.3\% \\
+Versatile™ & c.s.p 30 g \\
+\end{longtable}
+}
+
+\textbf{Posología:} Aplicar 1 vez al día.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Componente / Principio Activo & Concentración / Cantidad \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Tacrolimus & 0.1\% \\
+Versatile™ & c.s.p 30 g \\
+\end{longtable}
+}
+
+\textbf{Posología:} Aplicar 1 vez al día.
+
+\subsection{Dermatitis Atópica Pruriginosa}\label{dermatitis-atuxf3pica-pruriginosa}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Componente / Principio Activo & Concentración / Cantidad \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Lactato de amonio & 10\% \\
+Clobetasol & 0.025\% \\
+Aceite esencial de Lavanda & 0.3\% \\
+Fitalite™ & c.s.p 30 g \\
+\end{longtable}
+}
+
+\textbf{Posología:} Aplicar 2 veces al día.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Componente / Principio Activo & Concentración / Cantidad \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Óxido de zinc & 2\% \\
+Mentol & 0.2\% \\
+Alcanfor & 0.4\% \\
+Alantoína & 0.2\% \\
+Versatil™ & c.s.p 30 g \\
+\end{longtable}
+}
+
+\textbf{Posología:} Aplicar 2 veces al día.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Componente / Principio Activo & Concentración / Cantidad \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Coloide de avena & 3\% \\
+Alantoína & 0.2\% \\
+Ext. Cúrcuma & 3\% \\
+Physalis Angulata Extract & 1\% \\
+Fitalite™ & c.s.p 30 g \\
+\end{longtable}
+}
+
+\textbf{Posología:} Aplicar 2 veces al día.
+
+\subsection{Dermatitis Cenicienta}\label{dermatitis-cenicienta}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Componente / Principio Activo & Concentración / Cantidad \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Dapsona & 100 mg \\
+\end{longtable}
+}
+
+\textbf{Posología:} Tomar 1 cápsula/día durante 3 a 4 meses.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section*{Rosácea}\label{rosuxe1cea}
+
+
+\subsection{Rosácea Tópica Nocturna}\label{rosuxe1cea-tuxf3pica-nocturna}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Componente / Principio Activo & Concentración / Cantidad \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Extracto de caléndula & 2\% \\
+Extracto de Hamamelis & 2\% \\
+Bisabolol & 1\% \\
+Extracto de Árnica & 2\% \\
+Vitamina K1 & 1\% \\
+Ext. Castaño de indias & 3\% \\
+Physalis Angulata Extract & 1\% \\
+Fitalite™ & c.s.p 30 g \\
+\end{longtable}
+}
+
+\textbf{Posología:} Aplicar 1 vez al día, por la noche.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Componente / Principio Activo & Concentración / Cantidad \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Clotrimazol & 1\% \\
+Clindamicina & 1\% \\
+Metronidazol & 1\% \\
+Fitalite™ & c.s.p 30 g \\
+\end{longtable}
+}
+
+\textbf{Posología:} Aplicar 1 vez al día, por la noche.
+
+\subsection{Rosácea Descongestiva}\label{rosuxe1cea-descongestiva}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Componente / Principio Activo & Concentración / Cantidad \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Brimonidina tartrato & 0.3\% \\
+Metronidazol & 1\% \\
+Extracto de Árnica & 2\% \\
+Ext. Castaño de indias & 3\% \\
+Physalis Angulata Extract & 1\% \\
+Fitalite™ & c.s.p 30 g \\
+\end{longtable}
+}
+
+\textbf{Posología:} Aplicar 1 vez al día.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section*{Antiaging}\label{antiaging}
+
+
+Tratamientos cronorreguladores y antioxidantes en formato tópico y oral.
+
+\subsection{Antiaging Facial Día}\label{antiaging-facial-duxeda}
+
+\subsubsection{30-50 años}\label{auxf1os}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Componente / Principio Activo & Concentración / Cantidad \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+SiliciuMax líquido® & 10\% \\
+DermaSpheres Vit C & 5\% \\
+Palmitoyl Tripeptide-1 / Tetrapeptide-7 & 3\% \\
+Hialuronato de sodio (alto, medio, bajo PM) & 1\% \\
+Fitalite™ & c.s.p 30 g \\
+\end{longtable}
+}
+
+\textbf{Posología:} Aplicar 1 vez al día.
+
+\subsubsection{\textgreater50 años}\label{auxf1os-1}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Componente / Principio Activo & Concentración / Cantidad \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Coenzima Q10 & 0.2\% \\
+Vitamina E & 1\% \\
+Hialuronato de sodio (alto, medio, bajo PM) & 0.2\% \\
+Aceite de rosa mosqueta & 5\% \\
+Aceite de avena & 5\% \\
+Fitalite™ & c.s.p 30 g \\
+\end{longtable}
+}
+
+\textbf{Posología:} Aplicar 1 vez al día.
+
+\subsection{Antiaging Facial Noche}\label{antiaging-facial-noche}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Componente / Principio Activo & Concentración / Cantidad \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Serum Silanetriol / Hydrolyzed Collagen & 1.5\% \\
+Pomage® & 2\% \\
+Hexapéptido 8 (Argireline) & 10\% \\
+Hialuronato de sodio (alto, medio, bajo PM) & 2\% \\
+Palmitoyl Tripeptide-1 / Tetrapeptide-7 & 3\% \\
+SiliciuMax líquido® & 10\% \\
+Fitalite™ & c.s.p 30 g \\
+\end{longtable}
+}
+
+\textbf{Posología:} Aplicar 1 vez al día.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Componente / Principio Activo & Concentración / Cantidad \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Ácido retinoico & 0.05\% \\
+Ácido lactobiónico & 0.05\% \\
+Nourivan Antiox™ & c.s.p 30 g \\
+\end{longtable}
+}
+
+\textbf{Posología:} Aplicar 1 vez al día.
+
+\subsection{Antiaging Contorno de Ojos}\label{antiaging-contorno-de-ojos}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Componente / Principio Activo & Concentración / Cantidad \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Cafeisome & 5\% \\
+Hesperidin Methyl Chalcone complex & 3\% \\
+Palmitoyl Tripeptide-1 / Tetrapeptide-7 & 3\% \\
+SiliciuMax líquido® & 10\% \\
+Pentravan™ & c.s.p 30 g \\
+\end{longtable}
+}
+
+\textbf{Posología:} Aplicar 1 vez al día.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Componente / Principio Activo & Concentración / Cantidad \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Vitamina K1 & 1\% \\
+Vitamina E & 2\% \\
+Hesperidin Methyl Chalcone complex & 2\% \\
+Palmitoyl Tripeptide-1 / Tetrapeptide-7 & 3\% \\
+Pentravan™ & c.s.p 30 g \\
+\end{longtable}
+}
+
+\textbf{Posología:} Aplicar 1 vez al día.
+
+\subsection{Antiaging Oral (Nutricosmética)}\label{antiaging-oral-nutricosmuxe9tica}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Componente / Principio Activo & Concentración / Cantidad \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Biotina & 10 mg \\
+Sulfato de zinc & 5 mg \\
+L-Cistina & 66 mg \\
+L-Valina & 16 mg \\
+Hialuronato sódico & 35 mg \\
+Coenzima Q10 & 16 mg \\
+Niacina & 20 mg \\
+SiliciuMax® & 150 mg \\
+\end{longtable}
+}
+
+\textbf{Posología:} Administrar 2 cápsulas/día.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Componente / Principio Activo & Concentración / Cantidad \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Resveratrol & 25 mg \\
+Coenzima Q10 & 5 mg \\
+\end{longtable}
+}
+
+\textbf{Posología:} Administrar 2 cápsulas/día.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Componente / Principio Activo & Concentración / Cantidad \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Pomage® & 150 mg \\
+SiliciuMax® & 150 mg \\
+\end{longtable}
+}
+
+\textbf{Posología:} Administrar 2 cápsulas/día.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Componente / Principio Activo & Concentración / Cantidad \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Resveratrol & 8 mg \\
+Pinus pinaster & 100 mg \\
+\end{longtable}
+}
+
+\textbf{Posología:} Administrar 2 cápsulas/día.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section*{Hiperhidrosis, Radiodermitis y Prurito}\label{hiperhidrosis-radiodermitis-y-prurito}
+
+
+\subsection{Hiperhidrosis}\label{hiperhidrosis}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Componente / Principio Activo & Concentración / Cantidad \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Clorhidróxido de aluminio & 20\% \\
+Xylityl Sesquicaprylate & 1.5\% \\
+Alantoína & 0.5\% \\
+Loción antitranspirante & c.s.p 100 mL \\
+\end{longtable}
+}
+
+\textbf{Posología:} Aplicar 1 vez al día.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Componente / Principio Activo & Concentración / Cantidad \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Clorhidróxido de aluminio & 25\% \\
+Xylityl Sesquicaprylate & 1.5\% \\
+Alantoína & 0.2\% \\
+Talco & c.s.p 100 g \\
+\end{longtable}
+}
+
+\textbf{Posología:} Aplicar 1 vez al día.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Componente / Principio Activo & Concentración / Cantidad \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Clorhidróxido de aluminio & 15\% \\
+Tea Tree Oil & 0.5\% \\
+Urea & 5\% \\
+Espumil© & c.s.p 50 mL \\
+\end{longtable}
+}
+
+\textbf{Posología:} Aplicar 1 vez al día.
+
+\subsection{Radiodermitis}\label{radiodermitis}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Componente / Principio Activo & Concentración / Cantidad \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+D-pantenol & 1\% \\
+Extracto Glicólico Caléndula & 5\% \\
+Aloe vera & 3\% \\
+Nourisil® & c.s.p 50 g \\
+\end{longtable}
+}
+
+\textbf{Posología:} Aplicar 1 vez al día en zona afectada.
+
+\subsection{Prurito}\label{prurito}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Componente / Principio Activo & Concentración / Cantidad \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Óxido de Zinc & 8\% \\
+Glicerina & 5\% \\
+Lidocaína HCl & 2\% \\
+Aceite esencial de Lavanda & 0.5\% \\
+Base Calamina & 100 mL \\
+\end{longtable}
+}
+
+\textbf{Posología:} Aplicar 1 vez al día en zona afectada.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Componente / Principio Activo & Concentración / Cantidad \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Aceite esencial de Lavanda & 0.3\% \\
+Avena coloidal & 3\% \\
+Extracto de cúrcuma & 1\% \\
+Extracto glicólico Aloe Vera & 2\% \\
+Lidocaína & 1.5\% \\
+Extracto Glicólico Caléndula & 3\% \\
+Fitalite® & c.s.p 50 g \\
+\end{longtable}
+}
+
+\textbf{Posología:} Aplicar 1 vez al día en zona afectada.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section*{Miscelánea Dermatológica}\label{misceluxe1nea-dermatoluxf3gica}
+
+
+\subsection{Verrugas}\label{verrugas}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Componente / Principio Activo & Concentración / Cantidad \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+5-Fluoracilo & 2\% \\
+Ácido láctico & 10\% \\
+Ácido salicílico & 10\% \\
+Versatil® & c.s.p 30 g \\
+\end{longtable}
+}
+
+\textbf{Posología:} Aplicar dos veces al día en la zona afectada.
+
+\section{Acné prueba}\label{acnuxe9-prueba}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Componente / Principio Activo & Concentración / Cantidad \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Peróxido de benzoilo & 5\% \\
+Tea tree oil (Melaleuca) & 0.3\% \\
+Ac. esencial lavanda & 0.3\% \\
+Zymomonas honey ferment & 2\% \\
+Niacinamida & 4\% \\
+Base Syndet & c.s.p 100 ml \\
+\end{longtable}
+}
 
 \end{document}
