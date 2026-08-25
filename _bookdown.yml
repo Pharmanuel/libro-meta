@@ -15,5 +15,6 @@ rmd_files: [
   "07-capitulo.Rmd",
   "08-capitulo.Rmd",
   "09-capitulo.Rmd",
-  "10-capitulo.Rmd"
+  "10-capitulo.Rmd",
+  "11-capitulo.Rmd"
 ]
